@@ -14,8 +14,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
         <div className="main-content">
-          <div className="pt-40 text-[82px] font-semibold flex w-full justify-center">
-            <h1>Help millions access the internet</h1>
+          <div className="pt-40 pl-40 text-[82px] font-semibold flex w-2/3 justify-center">
+            <h1>Help millions access the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#54A8EA] to-[#167CCB]">internet</span>.</h1>
           </div>
         </div>
       </main>
