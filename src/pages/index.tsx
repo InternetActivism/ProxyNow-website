@@ -26,8 +26,10 @@ export default function Home() {
             </div>
             <p className="pt-5 pl-40 text-[24px] w-2/3">Easily find and deploy internet proxies to help people bypass internet censorship all over the world.</p>
           </div>
-          <ShareFriendsButtonBlue />
-          <ViewProxiesButtonWhite />
+          <div className="mt-10 ml-36">
+            <ShareFriendsButtonBlue />
+            <ViewProxiesButtonWhite />
+          </div>
           <div className="flex justify-center proxy-carousel mt-40">
             <p className="font-light text-[#575757]">Tap on a proxy to copy the address</p>
           </div>
@@ -48,7 +50,7 @@ export default function Home() {
             <StartProxyButtonBlue />
             <h2 className="font-semibold text-[32px] pb-2 pt-12 px-64">Share with Friends</h2>
             <p className="text-[24px] text-black px-64">The more people know about ProxyNow, the more people will be helped. Please consider sharing this link with your friends</p>
-            <div className="pl-24">
+            <div className="mt-4 ml-60">
               <ShareFriendsButtonBlue />
             </div>
           </div>
