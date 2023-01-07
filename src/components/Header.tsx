@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between transition-all px-4 py-6 md:px-20"
+        "fixed bg-white top-0 left-0 right-0 z-50 flex w-full items-center justify-between transition-all px-4 py-6 md:px-20"
       )}
     >
       <div className="flex items-center gap-6 transition-all md:gap-12">
