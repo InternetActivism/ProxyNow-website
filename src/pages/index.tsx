@@ -7,6 +7,7 @@ import ShareFriendsButtonBlue from '../components/ShareFriendsButtonBlue';
 import ViewProxiesButtonWhite from '../components/ViewProxiesButtonWhite';
 import ViewProxiesButtonBlue from '../components/ViewProxiesButtonBlue';
 import StartProxyButtonBlue from '../components/StartProxyButtonBlue';
+import SetupProxyButtonBlue from '../components/SetupProxyButtonBlue';
 
 export default function Home() {
   return (
@@ -28,33 +29,41 @@ export default function Home() {
           </div>
           <div className="pl-[9%] pr-[5%] inline-flex">
             <div className="mt-10">
-              <ShareFriendsButtonBlue />
+              <SetupProxyButtonBlue/>
             </div>
             <div className="mt-10 ml-5">
               <ViewProxiesButtonWhite />
             </div>
           </div>
           <div className="flex justify-center proxy-carousel mt-40">
-            <p className="font-light text-[#575757]">Tap on a proxy to copy the address</p>
+            <p className="font-light text-[#575757] sm:text-md md:text-lg lg:text-xl">Tap on a proxy to copy the address</p>
           </div>
         </div>
-        <div className="about-iran bg-[#0085FF] mt-16 py-16 px-48">
-          <p className='text-[24px] text-white'>Millions of people in Iran are unable to access the internet freely due to the oppressive actions of the government, which restrict access to platforms like WhatsApp and Telegram. This censorship is a blatant attempt to limit free speech and undermine the fundamental right to communicate freely online.</p>
+        <div className="about-iran bg-[#0085FF] mt-16 py-16 px-12 sm:px-24 md:px-32 lg:px-48 w-full">
+          <p className='text-md sm:text-lg md:text-xl lg:text-2xl text-white'>Millions of people in Iran are unable to access the internet freely due to the oppressive actions of the government, which restrict access to platforms like WhatsApp and Telegram. This censorship is a blatant attempt to limit free speech and undermine the fundamental right to communicate freely online.</p>
         </div>
-        <div className="about-proxies">
-          <div className="find-proxies pt-24 px-64">
-            <h1 className="font-semibold text-[#0984E3] text-[42px] pb-4 ">Find Proxies</h1>
-            <p className="text-[24px] text-black">Popular chat applications like WhatsApp and Telegram have launched easy-to-use proxies that are able to bypass attempts of censorship. ProxyNow has a centralized resource for finding live proxies to use.</p>
+        <div className="about-proxies w-full">
+          <div className="find-proxies pt-24 px-16 sm:px-32 md:px-48 lg:px-56 w-full">
+            <h1 className="font-semibold text-[#0984E3] text-2xl sm:text-3xl md:text-4xl lg:text-5xl pb-4 w-full">Find Proxies</h1>
+            <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-black">Popular chat applications like WhatsApp and Telegram have launched easy-to-use proxies that are able to bypass attempts of censorship. ProxyNow has a centralized resource for finding live proxies to use.</p>
           </div>
-          <ViewProxiesButtonBlue />
-          <div className="how-to-help pb-40">
-            <h1 className="font-semibold text-[#0984E3] text-[42px] pb-6 pt-32 px-64">How To Help</h1>
-            <h2 className="font-semibold text-[32px] pb-2 px-64">Start your own proxy in a couple clicks</h2>
-            <p className="text-[24px] text-black px-64">ProxyNow has created simple steps to start your own proxy without any technical experience. If you have access to a computer, we strongly suggest you consider starting a proxy.</p>
-            <StartProxyButtonBlue />
-            <h2 className="font-semibold text-[32px] pb-2 pt-12 px-64">Share with Friends</h2>
-            <p className="text-[24px] text-black px-64">The more people know about ProxyNow, the more people will be helped. Please consider sharing this link with your friends</p>
-            <div className="mt-4 ml-60">
+          <div className="pt-4 pl-12 sm:pl-28 md:pl-44 lg:pl-52">
+            <ViewProxiesButtonBlue />
+          </div>
+          <div className="how-to-help pb-40 w-full">
+            <div className="px-16 sm:px-32 md:px-48 lg:px-56">
+              <h1 className="font-semibold text-[#0984E3] text-2xl sm:text-3xl md:text-4xl lg:text-5xl pb-6 pt-32">How To Help</h1>
+              <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2">Start your own proxy in a couple clicks</h2>
+              <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-black">ProxyNow has created simple steps to start your own proxy without any technical experience. If you have access to a computer, we strongly suggest you consider starting a proxy.</p>
+            </div>
+            <div className="pt-4 pl-12 sm:pl-28 md:pl-44 lg:pl-52">
+              <StartProxyButtonBlue />
+            </div>
+            <div className="px-16 sm:px-32 md:px-48 lg:px-56">
+              <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2 pt-12">Share with Friends</h2>
+              <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-black">The more people know about ProxyNow, the more people will be helped. Please consider sharing this link with your friends</p>
+            </div>
+            <div className="pt-4 pl-12 sm:pl-28 md:pl-44 lg:pl-52">
               <ShareFriendsButtonBlue />
             </div>
           </div>
