@@ -19,16 +19,20 @@ export default function Home() {
       </Head>
       <Header />
       <main className={styles.main}>  
-        <div className="main-content">
-          <div className="main-text">
-            <div className="pt-40 pl-40 text-[82px] font-semibold flex w-2/3 justify-center">
+        <div className="main-content w-full">
+          <div className="main-text w-full">
+            <div className="pt-40 pl-[10%] pr-[10%] sm:pr-[5%] text-[2.25rem] sm:text-[2.5rem] md:text-[3 rem] lg:text-[4rem] xl:text-[5.25rem] font-semibold flex w-full lg:w-4/5">
               <h1>Help millions access the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#54A8EA] to-[#167CCB]">internet.</span></h1>
             </div>
-            <p className="pt-5 pl-40 text-[24px] w-2/3">Easily find and deploy internet proxies to help people bypass internet censorship all over the world.</p>
+            <p className="pt-5 pl-[10%] pr-[5%] sm:text-lg md:text-xl lg:text-2xl w-full lg:w-3/4">Easily find and deploy internet proxies to help people bypass internet censorship all over the world.</p>
           </div>
-          <div className="mt-10 ml-36">
-            <ShareFriendsButtonBlue />
-            <ViewProxiesButtonWhite />
+          <div className="pl-[9%] pr-[5%] inline-flex">
+            <div className="mt-10">
+              <ShareFriendsButtonBlue />
+            </div>
+            <div className="mt-10 ml-5">
+              <ViewProxiesButtonWhite />
+            </div>
           </div>
           <div className="flex justify-center proxy-carousel mt-40">
             <p className="font-light text-[#575757]">Tap on a proxy to copy the address</p>

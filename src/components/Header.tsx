@@ -15,17 +15,17 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed bg-white top-0 left-0 right-0 z-50 flex w-full items-center justify-between transition-all px-4 py-6 md:px-20"
+        "fixed bg-white top-0 left-0 right-0 z-50 flex w-full items-center justify-between transition-all px-4 py-6  md:px-20"
       )}
     >
-      <div className="flex items-center gap-6 transition-all md:gap-12">
+      <div className="flex items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 transition-all md:gap-12">
         <Brand />
-        <div className="flex text-lg gap-3 transition-all md:gap-6">
+        <div className="flex text-xs sm:text-sm md:text-md lg:text-lg gap-1 md:gap-2 lg:gap-3 transition-all md:gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-black pl-5 text-opacity-90 hover:text-opacity-100 transition-all"
+              className="text-black pl-2 md:pl-5 lg:pl-10 text-opacity-90 hover:text-opacity-100 transition-all"
             >
               {link.name}
             </Link>

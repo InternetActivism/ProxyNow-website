@@ -4,12 +4,12 @@ export const navLinks = [
     href: "/list",
   },
   {
-    name: "Proxy Register",
-    href: "/register",
+    name: "Setup a Proxy",
+    href: "/setup",
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Register Proxy",
+    href: "/register",
   },
 ];
 
