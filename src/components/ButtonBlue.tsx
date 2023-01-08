@@ -1,4 +1,4 @@
-const BlueButton = (props) => {
+const ButtonBlue = (props) => {
     return(
         <>
         <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white py-2 rounded-full">
@@ -11,4 +11,4 @@ const BlueButton = (props) => {
     );
 };
 
-export default BlueButton;
+export default ButtonBlue;

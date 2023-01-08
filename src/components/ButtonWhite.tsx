@@ -1,4 +1,4 @@
-const WhiteButton = (props) => {
+const ButtonWhite = (props) => {
     return(
         <>
         <button className="group proxy-button inline-flex items-center bg-[white] hover:bg-[#0085FF] hover:text-white text-[#0085FF] border border-[#0085FF] py-2 rounded-full">
@@ -11,4 +11,4 @@ const WhiteButton = (props) => {
     );
 };
 
-export default WhiteButton;
+export default ButtonWhite;
