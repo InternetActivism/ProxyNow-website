@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center proxy-carousel mt-32">
             {/*
-            READD WITH CAROUSEL
+            READ WITH CAROUSEL
             <p className="font-light text-[#575757] sm:text-md md:text-lg lg:text-xl">
               Tap on a proxy to copy the address
             </p> */}
@@ -113,40 +113,10 @@ export default function Home() {
               <ButtonBlue small={true} text={"Share with friends"} />
             </div>
           </div>
-          {/* <div className="how-to-help pb-32 w-full pt-20">
-            <div className="">
-              <h1 className="font-extrabold text-[#0984E3] text-2xl sm:text-3xl md:text-4xl lg:text-5xl pb-6">
-                How To Help
-              </h1>
-              <h2 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl pb-2">
-                Start your own proxy in a couple clicks
-              </h2>
-              <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-                ProxyNow has created simple steps to start your own proxy
-                without any technical experience. If you have access to a
-                computer, we strongly suggest you consider starting a proxy.
-              </p>
-            </div>
-            <div className="pt-4 ">
-              <ButtonBlue text={"Start Proxy"} />
-            </div>
-            <div className="">
-              <h2 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl pb-2 pt-8">
-                Share with Friends
-              </h2>
-              <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-                The more people know about ProxyNow, the more people will be
-                helped. Please consider sharing this link with your friends
-              </p>
-            </div>
-            <div className="pt-4">
-              <ButtonBlue text={"Share With Friends"} />
-            </div>
-          </div> */}
         </div>
         <Faq />
       </main>
-      <Footer light={true} />
+      <Footer />
     </>
   );
 }
