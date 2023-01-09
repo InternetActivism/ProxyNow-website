@@ -1,4 +1,5 @@
 import ButtonBlue from "./ButtonBlue";
+import ButtonDownload from "./ButtonDownload";
 
 const MacSetup = (props) => {
     return (
@@ -11,8 +12,10 @@ const MacSetup = (props) => {
 
                         <div className="pr-4 sm:pr-4 md:pr-10 lg:pr-80 pl-1 pt-0 md:pl-2 md:pt-1 lg:pl-3 lg:pt-2">
                             <h1 className="inline-block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2">Download Our Proxy Setup Tool</h1>
-                            <p className="text-black text-xs sm:text-sm md:text-md lg:text-lg text-opacity-90 hover:text-opacity-100 transition-all">For a quick and easy Proxy setup simply download and run our script</p>
+                            <p className="text-black text-xs sm:text-sm md:text-md lg:text-lg text-opacity-90 hover:text-opacity-100 transition-all pb-3">For a quick and easy Proxy setup simply download and run our script</p>
+                            <ButtonDownload />
                         </div>
+                        
                     </div>
 
                     <div className="flex pl-2 sm:pl-2 md:pl-5 lg:pl-40 pt-5">
@@ -32,7 +35,7 @@ const MacSetup = (props) => {
                         <div className="pr-4 sm:pr-4 md:pr-10 lg:pr-80 pl-1 pt-0 md:pl-2 md:pt-1 lg:pl-3 lg:pt-2">
                             <h1 className="inline-block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2">Share Your Proxy Address</h1>
                             <p className="text-black text-xs sm:text-sm md:text-md lg:text-lg text-opacity-90 hover:text-opacity-100 transition-all pb-3">That’s it, you now have a working proxy! Share the address displayed at the bottom of the Terminal to allow others to connect to your proxy. Please consider registering your proxy on our list to help people find it.</p>
-                            <ButtonBlue text={"Register Your Proxy"} />
+                            <ButtonBlue text={"Register Your Proxy"}  svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
                         </div>
                     </div>
                 </div>

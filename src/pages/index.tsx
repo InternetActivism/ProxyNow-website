@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className="pl-[10%] pr-[5%] inline-flex">
             <div className="mt-10">
-              <ButtonBlue text={"Setup Your Own Proxy"} />
+              <ButtonBlue text={"Setup Your Own Proxy"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
             </div>
             <div className="mt-10 ml-5">
               <ButtonWhite text={"View All Proxies"} />
@@ -71,7 +71,7 @@ export default function Home() {
             </p>
           </div>
           <div className="pt-4">
-            <ButtonBlue text={"View All Proxies"} />
+            <ButtonBlue text={"View All Proxies"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
           </div>
           <div className="how-to-help pb-32 w-full pt-20">
             <div className="">
@@ -88,7 +88,7 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-4 ">
-              <ButtonBlue text={"Start Proxy"} />
+              <ButtonBlue text={"Start Proxy"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z" />
             </div>
             <div className="">
               <h2 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl pb-2 pt-8">
@@ -100,7 +100,7 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-4">
-              <ButtonBlue text={"Share With Friends"} />
+              <ButtonBlue text={"Share With Friends"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z" />
             </div>
           </div>
         </div>
