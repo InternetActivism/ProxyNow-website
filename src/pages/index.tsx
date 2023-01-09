@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Header />
-      <main className="bg-[#f9fcfe]">
+      <main>
         <div className="main-content w-full">
           <div className="main-text w-full">
             <div className="pt-48 pl-[10%] pr-[10%] leading-[1.2] sm:pr-[5%] text-[2.25rem] sm:text-[2.5rem] md:text-[3 rem] lg:text-[4rem] xl:text-[5.25rem] font-semibold flex w-full lg:w-4/5">
