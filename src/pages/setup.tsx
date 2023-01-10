@@ -5,6 +5,7 @@ import ButtonBlue from '../components/ButtonBlue';
 import MacSetup from '../components/MacSetup';
 import { useState } from 'react';
 import WindowsSetup from '../components/WindowsSetup';
+import LinuxSetup from "../components/LinuxSetup";
 
 
 
@@ -41,7 +42,7 @@ export default function Setup() {
                     (selected == 'mac') ? <MacSetup /> : null
                 }
                 {
-                    (selected == 'linux') ? null : null
+                    (selected == 'linux') ? <LinuxSetup /> : null
                 }
                 {
                     (selected == 'windows') ?  <WindowsSetup /> : null
