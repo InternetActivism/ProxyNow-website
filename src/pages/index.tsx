@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="pl-[10%] pr-[5%] inline-flex">
             <div className="mt-10">
-              <ButtonBlue text={"Setup Your Own Proxy"} />
+              <ButtonBlue text={"Setup Your Own Proxy"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
             </div>
             <div className="mt-10 ml-5">
               <ButtonWhite text={"View All Proxies"} />
