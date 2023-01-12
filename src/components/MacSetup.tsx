@@ -1,5 +1,6 @@
 import ButtonBlue from "./ButtonBlue";
 import ButtonDownload from "./ButtonDownload";
+import MacScreenshots from "./MacScreenshots";
 
 const MacSetup = () => {
     const copy: {title: string, body: string}[] = [
@@ -27,7 +28,7 @@ const MacSetup = () => {
     return (
         <div>
             {stepData(0, <ButtonDownload />)}
-            {stepData(1)}
+            {stepData(1, <MacScreenshots />)}
             {stepData(2, <ButtonBlue text={"Register Your Proxy"}  svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>)}
             <div className="flex flex-row w-full px-4  pb-0 pt-10 sm:px-12 md:px-28 lg:px-36 mx-auto max-w-screen-xl">
                 <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pt-20 pb-2">

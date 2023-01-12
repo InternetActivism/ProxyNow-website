@@ -1,8 +1,12 @@
 import Image from "next/image";
 
 const ButtonDownload = () => {
+    const openUrlInNewTab = (url: string) => {
+      window.open(url, '_blank', 'noopener,noreferrer')
+    };
+
     return (
-      <>
+      <div className="flex flex-row items-center">
         <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white py-2 rounded-full px-1">
         
             
@@ -15,7 +19,17 @@ const ButtonDownload = () => {
                 </div>
             </div>
         </button>
-      </>
+        <div className="pl-2">
+          <p className="text-black/70">{'or view the source code on '}
+            <a 
+              className="text-primary underline cursor-pointer" 
+              onClick={() => openUrlInNewTab('https://github.com/InternetActivism/ProxyNow')}
+            >
+              GitHub
+            </a>
+          </p>
+        </div>
+      </div>
     );
   };
   
