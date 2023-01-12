@@ -5,7 +5,7 @@ const ButtonBlue = (props) => {
         <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white p-2 rounded-full ">
           <div
             className={
-              "text-2xs sm:text-xs md:text-sm lg:text-md pl-1 sm:pl-2 lg:pl-3"
+              "text-xs sm:text-xs md:text-sm lg:text-md pl-1 sm:pl-2 lg:pl-3"
             }
           >
             {props.text}
@@ -30,19 +30,12 @@ const ButtonBlue = (props) => {
   }
   return (
     <>
-      <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white py-2 rounded-full px-1">
-        <div
-          className={
-            props.small
-              ? "text-2xs sm:text-xs md:text-sm lg:text-md pl-3 sm:pl-4 lg:pl-6"
-              : "text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6"
-          }
-        >
+      <button className="inline-flex items-center bg-primary hover:bg-blue-700 text-white py-2 rounded-full px-1">
+        <div className={"text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6"}>
           {props.text}
         </div>
         <svg
-          width="36"
-          height="36"
+          className="w-[24px] h-[24px] sm:w-[36px] sm:h-[36px]"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

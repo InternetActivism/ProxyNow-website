@@ -42,7 +42,7 @@ export default function Home() {
               <ButtonWhite text={"View All Proxies"} />
             </div>
           </div>
-          <div className="flex justify-center proxy-carousel mt-32">
+          <div className="flex justify-center proxy-carousel mt-16 sm:mt-32">
             {/*
             READ WITH CAROUSEL
             <p className="font-light text-[#575757] sm:text-md md:text-lg lg:text-xl">
