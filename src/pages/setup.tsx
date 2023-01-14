@@ -23,7 +23,7 @@ export default function Setup() {
                <link rel="icon" href="/logo.svg" />
            </Head>
            <Header />
-           <div className="min-h-screen">
+           <div className="min-h-screen flex flex-col justify-between">
                 <div className="main-content w-full pt-12">
                     <div>
                         <div className="flex flex-col justify-center items-center">
@@ -68,9 +68,8 @@ export default function Setup() {
                     { selected === 'Windows' && <WindowsSetup /> }
                     
                 </div>
+                <Footer />
             </div>
- 
-           <Footer />
        </>
    );
 }
