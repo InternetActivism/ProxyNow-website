@@ -2,9 +2,13 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ButtonFilter from "../components/ButtonFilter";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+
+export type FilterName = 'All Proxies' | 'WhatsApp' | 'Telegram';
 
 const List = () => {
+  const [filter, setFilter] = useState<FilterName>('All Proxies');
+
   return (
     <>
       <Head>
@@ -22,35 +26,7 @@ const List = () => {
                 Filter
               </h1>
               <div className="flex flex-col gap-3">
-                <ButtonFilter
-                  focusState="true"
-                  text="All Proxies"
-                  fill="bg-[#F0F0F0]"
-                  hoverColor="hover:bg-[#0085FF]"
-                  hoverTextColor="hover:text-white"
-                  selectedColor="focus:bg-[#0085FF]"
-                  selectedTextColor="focus:text-white"
-                />
-                <ButtonFilter
-                  text="WhatsApp"
-                  svg="/whatsapp.svg"
-                  fill="bg-[#F0F0F0]"
-                  textColor="text-[#25D366]"
-                  hoverColor="hover:bg-green-500"
-                  hoverTextColor="hover:text-white"
-                  selectedColor="focus:bg-green-500"
-                  selectedTextColor="focus:text-white"
-                />
-                <ButtonFilter
-                  text="Telegram"
-                  svg="/telegram.svg"
-                  fill="bg-[#F0F0F0]"
-                  textColor="text-[#229ED9]"
-                  hoverColor="hover:bg-[#229ED9]"
-                  hoverTextColor="hover:text-white"
-                  selectedColor="focus:bg-[#229ED9]"
-                  selectedTextColor="focus:text-white"
-                />
+                <ButtonFilter filter={filter} setFilter={setFilter} />
               </div>
             </div>
             <div className="proxy-list">

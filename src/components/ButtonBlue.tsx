@@ -1,8 +1,15 @@
-const ButtonBlue = (props) => {
+interface Props {
+  small?: boolean;
+  text: string;
+  svgD?: string;
+  onClick?: () => void;
+}
+
+const ButtonBlue = (props: Props) => {
   if (props.small) {
     return (
       <>
-        <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white p-2 rounded-full ">
+        <button className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white p-2 rounded-full " onClick={props.onClick}>
           <div
             className={
               "text-xs sm:text-xs md:text-sm lg:text-md pl-1 sm:pl-2 lg:pl-3"
@@ -30,8 +37,10 @@ const ButtonBlue = (props) => {
   }
   return (
     <>
-      <button className="inline-flex items-center bg-primary hover:bg-blue-700 text-white py-2 rounded-full px-1">
-        <div className={"text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6"}>
+      <button className="inline-flex items-center bg-primary hover:bg-blue-700 text-white py-2 rounded-full px-1" onClick={props.onClick}>
+        <div
+          className={"text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6"}
+        >
           {props.text}
         </div>
         <svg

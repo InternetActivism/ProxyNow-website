@@ -1,36 +1,69 @@
 import Image from "next/image";
 import React from "react";
-import { useRef, useEffect } from "react";
+import { FilterName } from "../pages/list";
 
-const ButtonFilter = (props) => {
-    var svg;
-    if (props.svg) {
-        svg = <div className="px-1">
-                <Image src={props.svg} alt="logo" width={24} height={24} />
-            </div>
-    } else {
-        svg = <div className="pl-3 sm:pl-4 lg:pl-6"></div>
-    }
+type FilterData = {
+    text: FilterName,
+    svg?: string,
+    selectedClassNames: string,
+    unselectedClassNames: string
+}
 
-    const focusButton = useRef(null);
+interface Props {
+    filter: string;
+    setFilter: React.Dispatch<React.SetStateAction<FilterName>>;
+}
 
-    useEffect(() => {
-        if (props.focusState == "true") {
-            focusButton.current.focus();
+const ButtonFilter = ({ filter, setFilter }: Props) => {
+    const filters: FilterData[] = [
+        {
+            text: 'All Proxies',
+            selectedClassNames: 'bg-[#0085FF] text-white',
+            unselectedClassNames: 'bg-[#F0F0F0] hover:bg-[#0085FF]/70 hover:text-white'
+        },
+        {
+            text: 'WhatsApp',
+            svg: '/whatsapp.svg',
+            selectedClassNames: 'bg-green-500 text-white',
+            unselectedClassNames: 'bg-[#F0F0F0] text-[#25D366] hover:bg-green-500/70 hover:text-white'
+        },
+        {
+            text: 'Telegram',
+            svg: '/telegram.svg',
+            selectedClassNames: 'bg-[#229ED9] text-white',
+            unselectedClassNames: 'bg-[#F0F0F0] text-[#229ED9] hover:bg-[#229ED9]/70 hover:text-white'
         }
-    }, []);
+    ];
     
     return(
-        <>
-        <button ref={focusButton} className={`flex proxy-button ${props.fill} ${props.hoverColor} ${props.textColor} ${props.hoverTextColor} ${props.selectedColor} ${props.selectedTextColor} py-2 rounded-xl w-28 sm:w-32 md:w-36 lg:w-44`}>
-            <div className="flex items-center justify-center mx-auto">
-                {svg}
-                <div className="font-medium text-xs sm:text-sm md:text-md lg:text-lg pr-3 sm:pr-4 lg:pr-6">
-                    {props.text}
-                </div>
-            </div>
-        </button>
-        </>
+        <div className="flex flex-col gap-3">
+            {filters.map((filterInfo) => {
+                return (
+                    <label 
+                        key={filterInfo.text}
+                        htmlFor={`${filterInfo.text}-radio`}
+                        className={`flex items-center justify-center py-2 rounded-xl w-28 sm:w-32 md:w-36 lg:w-44 ${filter === filterInfo.text ? filterInfo.selectedClassNames : filterInfo.unselectedClassNames}`}
+                        onClick={() => setFilter(filterInfo.text)}
+                    >
+                        <input 
+                            type='radio'
+                            className='hidden'
+                            id={`${filterInfo.text}-radio`}
+                            value=''
+                            name='filter-radio'
+                        />
+                        {filterInfo.svg ? (
+                            <div className="px-1">
+                                <Image src={filterInfo.svg} alt={filterInfo.text} width={24} height={24} />
+                            </div>
+                        ) : null}
+                        <label className="font-medium text-xs sm:text-sm md:text-md lg:text-lg">
+                            {filterInfo.text}
+                        </label>
+                    </label>
+                );
+            })}
+        </div>
     );
 };
 

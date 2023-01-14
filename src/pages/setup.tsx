@@ -28,37 +28,37 @@ export default function Setup() {
                     <div>
                         <div className="flex flex-col justify-center items-center">
                             <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2 mt-16 text-center">
-                            Setup Your Own Proxy
+                                Setup Your Own Proxy
                             </h1>
                             <p className="text-black text-sm sm:text-md lg:text-lg pl-2 sm:pl-2 md:pl-5 lg:pl-10 text-opacity-90 hover:text-opacity-100 transition-all text-center">
                                 Run a proxy and support internet freedom with the click of a button
                             </p>
-                        <div className="inline-flex
-                            h-[50px]
-                            sm:h-[75px]
-                            mt-5
-                            bg-grey-medium
-                            rounded-2xl
-                            overflow-hidden">
-                                {osList.map((os) => {
-                                    return (
-                                        <label
-                                            key={os}
-                                            htmlFor={`${os}-radio`}
-                                            className={`flex items-center justify-center w-[77px] sm:w-[115px] px-4 py-1 rounded-2xl cursor-pointer hover:text-white mr-1 last:mr-0 ${selected === os ? 'bg-primary text-white' : 'hover:bg-primary hover:bg-opacity-60'}`}
-                                            onClick={() => { setSelected(os) }}
-                                        >
-                                            <input
-                                                type="radio"
-                                                className="hidden"
-                                                id={`${os}-radio`}
-                                                value=""
-                                                name="os-radio"
-                                            />
-                                            <label className="text-sm sm:text-xl font-medium text-center" htmlFor={`${os}-radio`}>{os}</label>
-                                        </label>
-                                    );
-                                })}
+                            <div className="inline-flex
+                                h-[50px]
+                                sm:h-[75px]
+                                mt-5
+                                bg-grey-medium
+                                rounded-2xl
+                                overflow-hidden">
+                                    {osList.map((os) => {
+                                        return (
+                                            <label
+                                                key={os}
+                                                htmlFor={`${os}-radio`}
+                                                className={`flex items-center justify-center w-[77px] sm:w-[115px] px-4 py-1 rounded-2xl cursor-pointer hover:text-white mr-1 last:mr-0 ${selected === os ? 'bg-primary text-white' : 'hover:bg-primary hover:bg-opacity-60'}`}
+                                                onClick={() => { setSelected(os) }}
+                                            >
+                                                <input
+                                                    type="radio"
+                                                    className="hidden"
+                                                    id={`${os}-radio`}
+                                                    value=""
+                                                    name="os-radio"
+                                                />
+                                                <label className="text-sm sm:text-xl font-medium text-center" htmlFor={`${os}-radio`}>{os}</label>
+                                            </label>
+                                        );
+                                    })}
                             </div>
                         </div>
                         

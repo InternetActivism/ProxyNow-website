@@ -1,4 +1,8 @@
-const ButtonWhite = (props) => {
+interface Props {
+    text: string;
+}
+
+const ButtonWhite = (props: Props) => {
     return(
         <>
         <button className="group proxy-button inline-flex items-center bg-[white] hover:bg-[#0085FF] hover:text-white text-[#0085FF] border border-[#0085FF] py-2 rounded-full">

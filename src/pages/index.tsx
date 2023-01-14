@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import ButtonBlue from "../components/ButtonBlue";
 import ButtonWhite from "../components/ButtonWhite";
 import Faq from "../components/Faq";
+import Link from "next/link";
+import ShareButton from "../components/ShareButton";
 
 export default function Home() {
   return (
@@ -30,17 +32,24 @@ export default function Home() {
               </h1>
             </div>
             <p className="pt-5 pl-[10%] text-gray-700 pr-[5%] sm:text-lg md:text-xl lg:text-2xl w-full lg:w-3/4">
-              Easily find and deploy internet proxies to help people bypass
-              internet censorship all over the world.
+              Easily find and deploy internet proxies to help people bypass internet
+              censorship all over the world.
             </p>
           </div>
           <div className="pl-[10%] pr-[5%] inline-flex">
-            <div className="mt-10">
-              <ButtonBlue text={"Setup Your Own Proxy"} svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
-            </div>
-            <div className="mt-10 ml-5">
-              <ButtonWhite text={"View All Proxies"} />
-            </div>
+            <Link href="/setup">
+              <div className="mt-10">
+                <ButtonBlue
+                  text={"Setup Your Own Proxy"}
+                  svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
+                />
+              </div>
+            </Link>
+            <Link href="/list">
+              <div className="mt-10 ml-5">
+                <ButtonWhite text={"View All Proxies"} />
+              </div>
+            </Link>
           </div>
           <div className="flex justify-center proxy-carousel mt-16 sm:mt-32">
             {/*
@@ -78,7 +87,9 @@ export default function Home() {
             </div>
 
             <div className="pt-4">
-              <ButtonBlue small={true} text={"Start a Proxy"} />
+              <Link href="/setup">
+                <ButtonBlue small={true} text={"Start a Proxy"} />
+              </Link>
             </div>
           </div>
           <div>
@@ -95,7 +106,9 @@ export default function Home() {
             </div>
 
             <div className="pt-4">
-              <ButtonBlue small={true} text={"View All Proxies"} />
+              <Link href="/list">
+                <ButtonBlue small={true} text={"View All Proxies"} />
+              </Link>
             </div>
           </div>
           <div>
@@ -110,7 +123,7 @@ export default function Home() {
             </div>
 
             <div className="pt-4">
-              <ButtonBlue small={true} text={"Share with friends"} />
+              <ShareButton />
             </div>
           </div>
         </div>
