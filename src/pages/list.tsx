@@ -2,9 +2,11 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ButtonFilter from "../components/ButtonFilter";
-import React, { useCallback, useEffect, useRef } from "react";
+import Proxies from "../components/Proxies";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const List = () => {
+
   return (
     <>
       <Head>
@@ -64,6 +66,7 @@ const List = () => {
                 <p className="pl-4 sm:pl-12 md:pl-14 lg:pl-20">Latency</p>
                 <p className="pl-3 sm:pl-10 md:pl-12 lg:pl-16">Last Checked</p>
               </div>
+              <Proxies />
             </div>
           </div>
           <div className="how-to"></div>
