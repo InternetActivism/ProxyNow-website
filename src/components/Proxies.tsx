@@ -2,11 +2,25 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { useTable } from 'react-table'
+import MaterialTable from 'material-table';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles'
+import { DataGrid } from '@material-ui/data-grid'
+
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
 const Proxies = () => {
 
     const IP_ADDRESS = '141.148.228.97'; // Example IP address
-    
+
+    const [tableData, setTableData] = useState([])
+
     useEffect(() => {
       createProxyTable();
       const val = setInterval(() => {
@@ -23,39 +37,45 @@ const Proxies = () => {
       }
     }
 
-    async function getCountryFromIp(ip) {
-      //console.log(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}` + '&ipAddress=' + ip)
-      //const response = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}` + '&ipAddress=' + ip);
-      const response = await fetch(`http://ip-api.com/json/` + ip)
-      const data = response.json();
-      //console.log(data.location.country);
-      //return data.location.country;
-      console.log(data.countryCode)
-      return data.countryCode;
-    }
-    
-    const dataTest = React.useMemo(() => [],[])
+    // async function getCountryFromIp(ip) {
+    //   //console.log(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}` + '&ipAddress=' + ip)
+    //   //const response = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}` + '&ipAddress=' + ip);
+    //   const response = await fetch(`http://ip-api.com/json/` + ip)
+    //   const data = response.json();
+    //   //console.log(data.location.country);
+    //   //return data.location.country;
+    //   console.log(data.countryCode)
+    //   return data.countryCode;
+    // }
 
     async function getIpInfo() { 
-      // fetchData()
-      const dataJSON = await fetchData();
+      const dataJSON = await new Promise(fetchData => setTimeout(fetchData, 1000));
       // console.log(dataJSON
-
+      let data = [];
       for (let [id, info] of Object.entries(dataJSON)) {
       
         
         // get countries
         let country = ""
         if(!info.country) {
-          country = await getCountryFromIp(info.ip)      
+          // country = await getCountryFromIp(info.ip)      
           // MAKE SURE TO IMPLEMENT INSERTING COUNTRY FLAG: https://stackoverflow.com/questions/49282818/icons-in-react-table 
         }
         else {
           country = info.country
         }
         
+        let platformData = [];
+        if(info.platforms.whatsapp && info.platforms.telegram) {
+          platformData = ["whatsapp", "telegram"];
+        }
+        else if(info.platforms.whatsapp) {
+          platformData = ["whatsapp"];
+        }
+        else if(info.platforms.telegram) {
+          platformData = ["telegram"];
+        }
         
-
         let obj = {
           // get ip addresses
           ip: info.ip,
@@ -63,116 +83,61 @@ const Proxies = () => {
           port: info.port,
           country: country,
           // get platforms
-          whatsappTrue: info.platforms.whatsapp,
-          telegramTrue: info.platforms.telegram
+          platforms: platformData
         }
-        dataTest.push(obj);
-        
+        data.push(obj);
       }
-      console.log(dataTest)
-      return dataTest
+      return data;
     }
 
     async function createProxyTable() {
-      console.log(getIpInfo())
+      setTableData(getIpInfo());
 
       // organize into table like below
     }
-    
-    const data = React.useMemo(
-      () => [
+
+    async function createData(number, item, qty, price) {
+      return { number, item, qty, price };
+     }
+       
+     const rows = [
+      createData(1, "Apple", 5, 3),
+      createData(2, "Orange", 2, 2),
+      createData(3, "Grapes", 3, 1),
+      createData(4, "Tomato", 2, 1.6),
+      createData(5, "Mango", 1.5, 4)
+     ];
+
+     const columns = [
         {
-          col1: 'Hello',
-          col2: 'World',
+          field:'ip',
+          headerName: 'IP Address', // accessor is the "key" in the data
         },
         {
-          col1: 'react-table',
-          col2: 'rocks',
+          field: 'port',
+          headerName: 'Port',
         },
         {
-          col1: 'whatever',
-          col2: 'you want',
-        },
-      ],
-      []
-    )
-    
-    const columns = React.useMemo(
-      () => [
-        {
-          Header: 'IP Address',
-          accessor: 'ip', // accessor is the "key" in the data
+          field: 'country',
+          headerName: 'Country',
         },
         {
-          Header: 'Port',
-          accessor: 'port',
-        },
-        {
-          Header: 'Country',
-          accessor: 'country',
-        },
-        {
-          Header: 'Platforms',
-          accessor: 'platforms',
+          field: 'platforms',
+          headerName: 'Platforms',
         }
-      ],
-      []
-    )
-    
-    const {
-      getTableProps,
-      getTableBodyProps,
-      headerGroups,
-      rows,
-      prepareRow,
-    } = useTable({ columns, dataTest })
-  
+      ]
+
     return (
-      <table {...getTableProps()} style={{ border: 'solid 1px blue' }}>
-        <thead>
-          {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
-                <th
-                  {...column.getHeaderProps()}
-                  style={{
-                    borderBottom: 'solid 3px red',
-                    background: 'aliceblue',
-                    color: 'black',
-                    fontWeight: 'bold',
-                  }}
-                >
-                  {column.render('Header')}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
-            prepareRow(row)
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map(cell => {
-                  return (
-                    <td
-                      {...cell.getCellProps()}
-                      style={{
-                        padding: '10px',
-                        border: 'solid 1px gray',
-                        background: 'papayawhip',
-                      }}
-                    >
-                      {cell.render('Cell')}
-                    </td>
-                  )
-                })}
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-    )
-};
+      <>
+        <div style={{ height: 700, width: '100%' }}>
+        <DataGrid
+          rows={tableData}
+          columns={columns}
+          pageSize={12}
+        />
+      </div>
+        </>
+    );
+}
 
 export default Proxies;
