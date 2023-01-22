@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 import ButtonFilter from "../components/ButtonFilter";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
-export type FilterName = 'All Proxies' | 'WhatsApp' | 'Telegram';
+export type FilterName = "All Proxies" | "WhatsApp" | "Telegram";
 
 const List = () => {
-  const [filter, setFilter] = useState<FilterName>('All Proxies');
+  const [filter, setFilter] = useState<FilterName>("All Proxies");
 
   return (
-    <>
+    <div className="flex flex-col h-screen justify-between">
       <Head>
         <title>ProxyNow: Prevent Censorship</title>
         <meta name="description" content="Prevent International Censorship" />
@@ -22,7 +22,25 @@ const List = () => {
         <div className={`min-h-screen flex flex-col justify-between`}>
           <div className="main-content w-full">
             <div className="flex flex-row gap-10 sm:gap-10 md:gap-15 lg:gap-20 pt-32">
-              <div className="filter pl-[5%] flex flex-col">
+              <div className="px-8 sm:px-16 md:px-32 lg:px-40 mx-auto max-w-screen-xl w-full">
+                <p className="text-md sm:text-lg md:text-xl lg:text-2xl">
+                  Due to the serious nature of this initiative, we recognize
+                  that it would be irresponsible to simply have a list of
+                  proxies on the open web. Instead, we will be working with our
+                  partner organizations to securely distribute the list of
+                  proxies to those who need it most.
+                </p>
+                <p className="text-md sm:text-lg md:text-xl lg:text-2xl mt-8">
+                  If you are in dire need of a proxy right now, please{" "}
+                  <a
+                    href="https://twitter.com/internetactvsm"
+                    className="text-[#0085FF] hover:text-[#167CCB] font-medium"
+                  >
+                    contact us on Twitter.
+                  </a>
+                </p>
+              </div>
+              {/* <div className="filter pl-[5%] flex flex-col">
                 <h1 className="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
                   Filter
                 </h1>
@@ -41,14 +59,14 @@ const List = () => {
                   <p className="pl-4 sm:pl-12 md:pl-14 lg:pl-20">Latency</p>
                   <p className="pl-3 sm:pl-10 md:pl-12 lg:pl-16">Last Checked</p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="how-to"></div>
           </div>
           <Footer />
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
