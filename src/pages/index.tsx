@@ -14,7 +14,7 @@ export default function Home() {
         <title>ProxyNow</title>
         <meta
           name="description"
-          content="Easily find and deploy internet proxies to help people bypass internet censorship all over the world."
+          content="Easily deploy internet proxies to help people bypass internet censorship all over the world."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="pt-5 pl-[10%] text-gray-700 pr-[5%] sm:text-lg md:text-xl lg:text-2xl w-full lg:w-3/4">
-              Easily find and deploy internet proxies to help people bypass internet
+              Easily deploy internet proxies to help people bypass internet
               censorship all over the world.
             </p>
           </div>
@@ -40,14 +40,14 @@ export default function Home() {
             <Link href="/setup">
               <div className="mt-10">
                 <ButtonBlue
-                  text={"Setup Your Own Proxy"}
+                  text={"Set up Your Own Proxy"}
                   svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
                 />
               </div>
             </Link>
             <Link href="/list">
               <div className="mt-10 ml-5">
-                <ButtonWhite text={"View All Proxies"} />
+                <ButtonWhite text={"Use a Proxy"} />
               </div>
             </Link>
           </div>
@@ -95,19 +95,20 @@ export default function Home() {
           <div>
             <div className="find-proxies pt-16  w-full">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
-                Find proxies
+                Bypass censorship with a proxy
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
                 Popular chat applications like WhatsApp and Telegram have
                 launched easy-to-use proxies that are able to bypass attempts of
-                censorship. View our list of verified proxies and learn about
-                how to use them on ProxyNow.
+                censorship. ProxyNow is working with its verified partner
+                organizations to securely distribute these proxies to those in
+                need.
               </p>
             </div>
 
             <div className="pt-4">
               <Link href="/list">
-                <ButtonBlue small={true} text={"View All Proxies"} />
+                <ButtonBlue small={true} text={"Use a Proxy"} />
               </Link>
             </div>
           </div>
