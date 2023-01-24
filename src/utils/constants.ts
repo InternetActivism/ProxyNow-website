@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    name: "Set up Proxy",
+    name: "Set Up A Proxy",
     href: "/setup",
   },
   {
@@ -9,7 +9,7 @@ export const navLinks = [
   },
   {
     name: "Use Proxy",
-    href: "/list",
+    href: "/use",
   },
 ];
 
@@ -33,7 +33,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; Windows: Step[] } = {
   Mac: [
     {
       title: "Download Our Proxy Setup Tool",
-      body: "For a quick and easy Proxy setup simply download and run our script",
+      body: "For a quick and easy proxy setup simply download and run our script",
     },
     {
       title: "Run The Proxy",

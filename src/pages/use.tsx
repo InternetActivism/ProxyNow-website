@@ -12,8 +12,8 @@ const List = () => {
   return (
     <div className="flex flex-col h-screen justify-between">
       <Head>
-        <title>ProxyNow: Prevent Censorship</title>
-        <meta name="description" content="Prevent International Censorship" />
+        <title>Use a Proxy - ProxyNow</title>
+        <meta name="description" content="Finding and how to use a proxy." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </Head>
@@ -43,26 +43,6 @@ const List = () => {
                   </a>
                 </p>
               </div>
-              {/* <div className="filter pl-[5%] flex flex-col">
-                <h1 className="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
-                  Filter
-                </h1>
-                <div className="flex flex-col gap-3">
-                  <ButtonFilter filter={filter} setFilter={setFilter} />
-                </div>
-              </div>
-              <div className="proxy-list">
-                <h1 className="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
-                  Proxies Available
-                </h1>
-                <div className="proxy-columns flex flex-row justify-between w-full text-[#C1C1C1] text-[0.4rem] sm:text-sm md:text-md lg:text-lg">
-                  <p className="pl-1 sm:pl-2">IP Address</p>
-                  <p className="pl-4 sm:pl-12 md:pl-14 lg:pl-20">Location</p>
-                  <p className="pl-6 sm:pl-18 md:pl-20 lg:pl-44">Platforms</p>
-                  <p className="pl-4 sm:pl-12 md:pl-14 lg:pl-20">Latency</p>
-                  <p className="pl-3 sm:pl-10 md:pl-12 lg:pl-16">Last Checked</p>
-                </div>
-              </div> */}
             </div>
             <div className="how-to px-8 sm:px-16 md:px-32 lg:px-40 mx-auto max-w-screen-xl w-full mt-12">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
@@ -73,9 +53,9 @@ const List = () => {
               </p>
             </div>
           </div>
-          <Footer />
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

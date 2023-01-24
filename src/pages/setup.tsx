@@ -26,7 +26,7 @@ export default function Setup() {
           <div>
             <div className="flex flex-col justify-center items-center">
               <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2 mt-16 text-center">
-                Set up Your Own Proxy
+                Set Up Your Own Proxy
               </h1>
               <p className="text-black text-sm sm:text-md lg:text-lg pl-2 sm:pl-2 md:pl-5 lg:pl-10 text-opacity-90 hover:text-opacity-100 transition-all text-center">
                 Run a proxy and support internet freedom with the click of a

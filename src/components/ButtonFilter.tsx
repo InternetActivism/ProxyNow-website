@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FilterName } from "../pages/list";
+import { FilterName } from "../pages/use";
 
 type FilterData = {
     text: FilterName,
