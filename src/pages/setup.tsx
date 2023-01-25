@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 import ButtonBlue from "../components/ButtonBlue";
 import MacSetup from "../components/MacSetup";
 import { useState } from "react";
-import WindowsSetup from "../components/WindowsSetup";
+import AWSSetup from "../components/AWSSetup";
 import LinuxSetup from "../components/LinuxSetup";
 
 export default function Setup() {
   const [selected, setSelected] = useState("Mac");
 
-  const osList = ["Mac", "Linux", "Windows"];
+  const osList = ["Mac", "Linux", "AWS"];
 
   return (
     <>
@@ -76,7 +76,7 @@ export default function Setup() {
           </div>
           {selected === "Mac" && <MacSetup />}
           {selected === "Linux" && <LinuxSetup />}
-          {selected === "Windows" && <WindowsSetup />}
+          {selected === "AWS" && <AWSSetup />}
         </div>
         <Footer />
       </div>
