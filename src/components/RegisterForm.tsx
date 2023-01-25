@@ -6,20 +6,20 @@ function Form() {
   const [port, setPort] = useState('');
   const [protocol, setProtocol] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{ ip?: string, port?: string, additionalInfo?: string }>({});
   const [isLoading, setLoading] = useState(false);
-  const [isSubmitted, setSubmitted] = useState({});
+  const [isSubmitted, setSubmitted] = useState<{ message?: string}>({});
   
   // Clear errors when component is first loaded
     useEffect(() => {
         setErrors({});
     }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     const errors = await validate();
-    const submitMessage = {}
+    const submitMessage: {message?: string} = {};
     if(Object.keys(errors).length === 0) {
         const url = 'https://proxynow-c699d-default-rtdb.firebaseio.com/proxynow-form/.json';
         const data = { ip, port, protocol, additionalInfo };
@@ -46,7 +46,7 @@ function Form() {
     setSubmitted(submitMessage)
   };
 
-  const checkIpExists = async (ip) => {
+  const checkIpExists = async (ip: string) => {
     // Your JSON file URL
     const url_registered = `https://proxynow-c699d-default-rtdb.firebaseio.com/proxynow-form/.json?orderBy="ip"&equalTo="${ip}"`;
     const url_proxynow = `https://proxynow-c699d-default-rtdb.firebaseio.com/proxynow-script/.json?orderBy="ip"&equalTo="${ip}"`;
@@ -66,7 +66,11 @@ function Form() {
 
   
   const validate = async () => {
-    const errors = {};
+    const errors: {
+      ip?: string;
+      port?: string;
+      additionalInfo?: string;
+    } = {};
     if (!ip.match(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/)) {
       errors.ip = 'Invalid IP address.';
     }
@@ -129,7 +133,7 @@ function Form() {
                 </label>
 
             <br />
-                <textarea className="w-3/4 border border-[#0085FF] rounded [resize:none] mt-3" value={additionalInfo} onChange={e => setAdditionalInfo(e.target.value)} rows="4" cols="50" maxlength="200"/>
+                <textarea className="w-3/4 border border-[#0085FF] rounded [resize:none] mt-3" value={additionalInfo} onChange={e => setAdditionalInfo(e.target.value)} rows={4} cols={50} maxLength={200} />
             <br />
         </div>
       </div>

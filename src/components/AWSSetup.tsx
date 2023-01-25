@@ -43,7 +43,9 @@ const AWSSetup = () => {
                     </SetupStepText>
                     <CodeSnippet text={`./Linux.sh`} />
                     <SetupStepText className="pb-10">
-                        {`Your proxy is now running! You can test it by connecting to the proxy address displayed in the terminal. Please consider registering your proxy on our list to help people who need it.`}
+                        {`If you recieve a prompt asking if you would like to close a process running on conflicting ports, respond with "y".
+                        
+                        Your proxy is now running! You can test it by connecting to the proxy address displayed in the terminal. Please consider registering your proxy on our list to help people who need it.`}
                     </SetupStepText>
                 </>
             </SetupStep>
