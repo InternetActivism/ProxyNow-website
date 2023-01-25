@@ -59,49 +59,11 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
             Head over to the AWS console and search for VPC and click it. On the left sidebar click on “Your VPCs” and then click on “Create VPC”.
 
             Use the following settings:
-
-            (image here)
-
-            Click on “Create VPC”.
       `
     },
     {
       title: "Setup an EC2 Instance",
-      body: `The next step is to create an EC2 instance which will host the proxy.
-
-             Before starting the instance we need to create a key pair which will allow us to SSH into the instance. Head over to the AWS console and search for EC2 and click it. On the left sidebar click on “Key Pairs” and then click on “Create Key Pair”.
-
-             Use the following settings:
-
-             (image here)
-
-             Give the key pair a name and click on “Create Key Pair”. This will download a .pem file which you should save on your computer and not share.
-
-            Next, we can start up the EC2 instance. Head over to the AWS console and search for EC2 and click it. On the left sidebar click on “Instances” and then click on “Launch Instance”.
-
-            Use the following settings:
-
-            (image here)
-
-            For key pair select the key pair you created in the previous step.
-
-            (image here) 
-
-            Under network settings select the VPC you created and the subnet associated with it.
-
-            (image here)
-
-            Keep note of what you chose for "Security group name" as we will need this later. You can now click on "Launch Instance".
-
-            Right now the instance is running but it does not have the ports open that are required for us to connect to the proxy. To open the ports, go back to the EC2 dashboard and click Security Groups on the left sidebar.
-
-            Find the security group you created and click on it. Click on "Inbound rules" and then click on "Edit Inbound Rules".
-
-            Add the following rules to your security group:
-
-            (image here)
-
-            Click on "Save rules".`
+      body: `The next step is to create an EC2 instance which will host the proxy.`
     },
     {
       title: "Run the Proxy on our Container",
