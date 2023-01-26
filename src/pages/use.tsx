@@ -44,7 +44,7 @@ const List = () => {
                 </p>
               </div>
             </div>
-            <div className="how-to px-8 sm:px-16 md:px-32 lg:px-40 mx-auto max-w-screen-xl w-full mt-12">
+            <div className="how-to px-8 sm:px-16 md:px-32 lg:px-40 mx-auto max-w-screen-xl w-full my-12">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
                 How to use a Proxy
               </h1>
@@ -57,6 +57,13 @@ const List = () => {
                 5. Save the settings and check for a successful connection indicated by a green tick <br/>
                 6. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
                 <br/>
+                <b>How to connect to a proxy on Telegram on Android:</b><br/>
+                1. Open the Telegram app and tap the three lines at the top left.<br/>
+                2. Select Settings &gt; Data and Storage &gt; Proxy Settings &gt; Use Proxy or Add Proxy.<br/>
+                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
+                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap the tick mark. If you used our script you do not have to enter any credentials.<br/>
+                4. If the proxy shows as connected at the bottom of your Android device, it is now online.<br/>
+                <br/>
                 <b>How to connect to a proxy on WhatsApp on iPhone:</b><br/>
                 1. Ensure you have the latest version of WhatsApp <br/>
                 2. Go to WhatsApp Settings &gt; Storage and Data &gt; Proxy <br/>
@@ -64,7 +71,21 @@ const List = () => {
                 4. Save the settings and check for a successful connection indicated by a green tick <br/>
                 5. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
                 <br/>
-                Note: Using a third-party proxy will share your IP address with the proxy provider. WhatsApp does not provide third-party proxies.
+                <b>How to connect to a proxy on Telegram on iPhone:</b><br/>
+                1. Open the Telegram app and tap settings.<br/>
+                2. Select Data and Storage &gt; Proxy &gt; Add Proxy.<br/>
+                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
+                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap done. If you used our script you do not have to enter any credentials.<br/>
+                4. Toggle the Use proxy button to enable the proxy.<br/>
+                <br/>
+                <b>How to connect to a proxy on Telegram on Desktop:</b><br/>
+                1. Open the Telegram app and tap the settings icon.<br/>
+                2. Select Data and Storage &gt; Use Proxy &gt; Add Proxy.<br/>
+                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
+                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap done. If you used our script you do not have to enter any credentials.<br/>
+                4. Toggle the Proxy button to enable the proxy.<br/>
+                <br/>
+                Note: Using a third-party proxy will share your IP address with the proxy provider. 
               </p>
             </div>
           </div>
