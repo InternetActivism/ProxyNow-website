@@ -40,7 +40,9 @@ const AWSSetup = () => {
                         />
                     </div>
                     <SetupStepText>
-                        {`Give the key pair a name and click on “Create Key Pair”. This will download a .pem file which you should save on your computer and not share.
+                        {`Note: If you are on Windows select .ppk for Private key file format and install PuTTY.
+                        
+                        Give the key pair a name and click on “Create Key Pair”. This will download a .pem file which you should save on your computer and not share.
 
                         Next, we can start up the EC2 instance. Head over to the AWS console and search for EC2 and click it. On the left sidebar click on “Instances” and then click on “Launch Instance”.
 
@@ -94,7 +96,7 @@ const AWSSetup = () => {
                     </SetupStepText>
                 </>
             </SetupStep>
-            <SetupStep step={4} stepData={copy[3]} >
+            <SetupStep step='4a' stepData={copy[3]} >
                 <>
                     <SetupStepText>   
                         {`Ensure that the EC2 instance is running by checking the "Instance state" on the instances dashboard. If it is not running click on then container then press "Actions" and then click on "Start".
@@ -108,6 +110,23 @@ const AWSSetup = () => {
                         {`Now you can SSH into the instance using the following command:`}
                     </SetupStepText>
                     <CodeSnippet text={`ssh -i <your-key-name>.pem ubuntu@<public-ipv4-dns>`} />
+                </>
+            </SetupStep>
+            <SetupStep step='4b' stepData={copy[4]} >
+                <>
+                    <SetupStepText>   
+                        {`Ensure that the EC2 instance is running by checking the "Instance state" on the instances dashboard. If it is not running click on then container then press "Actions" and then click on "Start".
+
+                        Take note of the Public IPv4 address of the instance. You can find this on the instances dashboard under the "Public IPv4 address" column.
+
+                        Open PuTTY and navigate to Connection > SSH > Auth > Credentials. For "Private key file for authentication" select the .ppk file you downloaded earlier.
+
+                        Next navigate to Session and enter the Public IPv4 address for Host Name then press open. A window will appear prompting you for a login name. Type "ubuntu" and press enter.`}
+                    </SetupStepText>
+                </>
+            </SetupStep>
+            <SetupStep step={5} stepData={copy[5]} >
+                <>
                     <SetupStepText>
                         {`You should now be connected to the EC2 instance. Before we run any commands, switch to superuser by running the following command:`}
                     </SetupStepText>

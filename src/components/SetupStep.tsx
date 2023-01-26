@@ -2,7 +2,7 @@ import { Step } from "../utils/constants";
 import SetupStepText from "./SetupStepText";
 
 interface Props {
-  step: number;
+  step: number | string;
   stepData: Step;
   children?: JSX.Element;
 }

@@ -79,8 +79,16 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
       body: `The next step is to create an EC2 instance which will host the proxy.`
     },
     {
+      title: "Connect to the EC2 Instance (Linux or Mac)",
+      body: `The next step is to connect to the EC2 instance we created.`
+    },
+    {
+      title: "Connect to the EC2 Instance (Windows)",
+      body: `The next step is to connect to the EC2 instance we created.`
+    },
+    {
       title: "Run the Proxy on your Container",
-      body: `The next step is to run the proxy on our container. To do this we will need to SSH into the EC2 instance we created.`}
+      body: `The next step is to run the proxy on our container`}
   ],
 };
 
