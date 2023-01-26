@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import PlusIcon from '../../public/plusIcon.svg';
 
 const ICON_SIZE: number = 25;
@@ -11,6 +11,7 @@ interface Props {
 
 const TroubleshootingRow = ({title, body}: Props) => {
     const [expanded, setExpanded] = useState(false);
+    const stepRef = useRef<HTMLDivElement>(null);
 
     return(
         <div className="pb-5 sm:pb-10">
@@ -27,10 +28,13 @@ const TroubleshootingRow = ({title, body}: Props) => {
                 />
                 </div>
             </div>
-            {expanded &&
-                <div className="pt-4">
-                    { body }
-                </div>}
+            <div 
+                className="pt-4 transition-height duration-500 ease-in-out overflow-hidden"
+                ref={stepRef}
+                style={{ height: expanded ? stepRef.current?.scrollHeight : '0px' }}
+            >
+                { body }
+            </div>
         </div>
     );
 };
