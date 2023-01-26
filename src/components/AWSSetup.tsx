@@ -64,41 +64,53 @@ const AWSSetup = () => {
                         />
                     </div>
                     <SetupStepText>
-                        {`Under network settings select the VPC you created and the subnet associated with it.
-
-                        (image here)
-
-                        Keep note of what you chose for "Security group name" as we will need this later. You can now click on "Launch Instance".
+                        {`Under network settings select the VPC you created and the subnet associated with it.`}
+                    </SetupStepText>
+                    <div className="w-full flex flex-row justify-center py-5">
+                        <img
+                            className="object-contain w-2/3"
+                            src="/ec2-network.png"
+                            alt="EC2 Instance Setup (Network Settings)"
+                        />
+                    </div>
+                    <SetupStepText>
+                        {`Keep note of what you chose for "Security group name" as we will need this later. You can now click on "Launch Instance".
 
                         Right now the instance is running but it does not have the ports open that are required for us to connect to the proxy. To open the ports, go back to the EC2 dashboard and click Security Groups on the left sidebar.
 
                         Find the security group you created and click on it. Click on "Inbound rules" and then click on "Edit Inbound Rules".
 
-                        Add the following rules to your security group:
-
-                        (image here)
-
-                        Click on "Save rules".`}
+                        Add the following rules to your security group:`}
+                    </SetupStepText>
+                    <div className="w-full flex flex-row justify-center py-5">
+                        <img
+                            className="object-contain w-full"
+                            src="/security-group.png"
+                            alt="Security Group Rules"
+                        />
+                    </div>
+                    <SetupStepText>
+                        {`Click on "Save rules".`}
                     </SetupStepText>
                 </>
             </SetupStep>
             <SetupStep step={4} stepData={copy[3]} >
                 <>
-                    <p className="text-black text-sm sm:text-md md:text-lg lg:text-xl text-opacity-90 hover:text-opacity-100 transition-all whitespace-pre-line">
+                    <SetupStepText>   
                         {`Ensure that the EC2 instance is running by checking the "Instance state" on the instances dashboard. If it is not running click on then container then press "Actions" and then click on "Start".
 
                         Take note of the Public IPv4 DNS of the instance. You can find this on the instances dashboard under the "Public IPv4 DNS" column.
                 
                         Open a terminal and navigate to the directory where you saved the .pem file. Run the following command to make sure your key is not publicly viewable:`}
-                    </p>
+                    </SetupStepText>
                     <CodeSnippet text={`chmod 400 <your-key-name>.pem`} />
-                    <p className="text-black text-sm sm:text-md md:text-lg lg:text-xl text-opacity-90 hover:text-opacity-100 transition-all whitespace-pre-line">
+                    <SetupStepText>    
                         {`Now you can SSH into the instance using the following command:`}
-                    </p>
+                    </SetupStepText>
                     <CodeSnippet text={`ssh -i <your-key-name>.pem ubuntu@<public-ipv4-dns>`} />
-                    <p className="text-black text-sm sm:text-md md:text-lg lg:text-xl text-opacity-90 hover:text-opacity-100 transition-all whitespace-pre-line">
+                    <SetupStepText>
                         {`You should now be connected to the EC2 instance. Before we run any commands, switch to superuser by running the following command:`}
-                    </p>
+                    </SetupStepText>
                     <CodeSnippet text={`sudo su`} />
                     <SetupStepText>
                         {`Now we can clone the proxy repository. Run the following command to download the proxy:`}
