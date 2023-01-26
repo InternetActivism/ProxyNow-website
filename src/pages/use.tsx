@@ -48,8 +48,23 @@ const List = () => {
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
                 How to use a Proxy
               </h1>
-              <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
-                TODO
+              <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 whitespace-pre-line">
+                <b>How to connect to a proxy on WhatsApp on Android:</b><br/>
+                1. Ensure you have the latest version of WhatsApp <br/>
+                2. Go to Chats &gt; More options &gt; Settings <br/>
+                3. Tap Storage and Data &gt; Proxy <br/>
+                4. Select Use Proxy and enter the proxy address <br/>
+                5. Save the settings and check for a successful connection indicated by a green tick <br/>
+                6. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
+                <br/>
+                <b>How to connect to a proxy on WhatsApp on iPhone:</b><br/>
+                1. Ensure you have the latest version of WhatsApp <br/>
+                2. Go to WhatsApp Settings &gt; Storage and Data &gt; Proxy <br/>
+                3. Select Use Proxy and enter the proxy address <br/>
+                4. Save the settings and check for a successful connection indicated by a green tick <br/>
+                5. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
+                <br/>
+                Note: Using a third-party proxy will share your IP address with the proxy provider. WhatsApp does not provide third-party proxies.
               </p>
             </div>
           </div>
