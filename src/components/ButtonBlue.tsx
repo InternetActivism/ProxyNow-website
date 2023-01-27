@@ -39,11 +39,12 @@ const ButtonBlue = (props: Props) => {
     <>
       <button className="inline-flex items-center bg-primary hover:bg-blue-700 text-white py-2 rounded-full px-1" onClick={props.onClick}>
         <div
-          className={"text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6"}
+          className={`text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6 ${!props.svgD && "pr-3 sm:pr-4 lg:pr-6"}`}
         >
-          {props.text}
+            {props.text}
         </div>
-        <svg
+        {props.svgD && (
+          <svg
           className="w-[24px] h-[24px] sm:w-[36px] sm:h-[36px]"
           viewBox="0 0 24 24"
           fill="none"
@@ -56,6 +57,7 @@ const ButtonBlue = (props: Props) => {
             fill="white"
           />
         </svg>
+        )}
       </button>
     </>
   );

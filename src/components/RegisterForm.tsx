@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import ButtonBlue from "./ButtonBlue";
 
 const protocolToPlatform = {
-  http: "WhatsApp",
-  https: "WhatsApp",
-  socks5: "Telegram",
-  mtproto: "Telegram",
+  http: "whatsapp",
+  https: "whatsapp",
+  socks5: "telegram",
+  mtproto: "telegram",
 };
 
 function Form() {
@@ -14,14 +14,13 @@ function Form() {
   const [port, setPort] = useState("");
   const [protocol, setProtocol] = useState<
     "http" | "https" | "socks5" | "mtproto" | ""
-  >("");
+  >("http");
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [errors, setErrors] = useState<{
     ip?: string;
     port?: string;
     additionalInfo?: string;
   }>({});
-  const [isLoading, setLoading] = useState(false);
   const [isSubmitted, setSubmitted] = useState<{ message?: string }>({});
 
   // Clear errors when component is first loaded
@@ -29,9 +28,16 @@ function Form() {
     setErrors({});
   }, []);
 
+  const clearForm = () => {
+    setIp("");
+    setPort("");
+    setProtocol("http");
+    setAdditionalInfo("");
+    setErrors({});
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     let errors = await validate();
     if (!protocol) {
       errors.protocol = "Please select a protocol.";
@@ -56,17 +62,15 @@ function Form() {
           body: JSON.stringify(data),
         });
 
-        setLoading(false);
         setErrors({});
         console.log("Data saved successfully");
         submitMessage.message = "Submitted!";
+        clearForm();
       } catch (error) {
-        setLoading(false);
         console.error("Error saving data: ", error);
         submitMessage.message = "Error submitting!";
       }
     } else {
-      setLoading(false);
       setErrors(errors);
     }
     setSubmitted(submitMessage);
