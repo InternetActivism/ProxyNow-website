@@ -177,7 +177,7 @@ function Form() {
             </div>
             <select
               value={protocol}
-              className="border border-[#0085FF] rounded mx-3"
+              className={`border border-[#0085FF] rounded mx-3 py-1 px-2 w-1/3`}
               onChange={(e) => {
                 // see if e target value is "" | "http" | "https" | "socks5" | "mtproto"
                 if (

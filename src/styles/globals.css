@@ -26,3 +26,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%230085FF' width='17' height='14' viewBox='0 0 23 14' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M21.8331 3.3336L12.2872 12.8796C11.7014 13.4653 10.7516 13.4653 10.1658 12.8796L0.619919 3.3336C0.0341188 2.7478 0.0341188 1.7981 0.619919 1.2123C1.20572 0.626499 2.15542 0.626499 2.74122 1.2123L11.2265 9.6976L19.7118 1.2123C20.2976 0.626499 21.2473 0.626499 21.8331 1.2123C22.4189 1.7981 22.4189 2.7478 21.8331 3.3336Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 10px;
+}
