@@ -14,7 +14,7 @@ const MacSetup = () => {
     return (
         <div>
             <SetupStep step={1} stepData={copy[0]} >
-                <ButtonDownload />
+                <ButtonDownload platform="Mac" />
             </SetupStep>
             <SetupStep step={2} stepData={copy[1]} >
                 <MacScreenshots />

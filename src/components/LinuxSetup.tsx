@@ -15,7 +15,7 @@ const LinuxSetup = () => {
     return (
         <div>
             <SetupStep step={1} stepData={copy[0]} >
-                <ButtonDownload />
+                <ButtonDownload platform='Linux' />
             </SetupStep>
             <SetupStep step={2} stepData={copy[1]} >
                 <>
@@ -24,17 +24,13 @@ const LinuxSetup = () => {
                     </SetupStepText>
                     <CodeSnippet text="sudo su" />
                     <SetupStepText>
-                        Open the scripts directory:
-                    </SetupStepText>
-                    <CodeSnippet text="cd scripts" />
-                    <SetupStepText>
                         Allow the script to be executed:
                     </SetupStepText>
-                    <CodeSnippet text="chmod u+x Linux.sh" />
+                    <CodeSnippet text="chmod u+x start-proxy.sh" />
                     <SetupStepText>
                         Run the script:
                     </SetupStepText>
-                    <CodeSnippet text="./Linux.sh" />
+                    <CodeSnippet text="./start-proxy.sh" />
                 </>
             </SetupStep>
             <SetupStep step={3} stepData={copy[2]} >
