@@ -133,95 +133,102 @@ function Form() {
   };
 
   return (
-    <div className="grow-0 mt-12">
-      <form onSubmit={handleSubmit}>
-        <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2 mt-16 mb-8 text-center">
-          Register A Proxy
-        </h1>
-        <div className="ml-28">
-          <div className="mb-8 flex flex-row">
-            <div>
-              <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-                IP Address:
-              </label>
-            </div>
-            <input
-              type="text"
-              className="border border-[#0085FF] rounded mx-3 "
-              value={ip}
-              onChange={(e) => setIp(e.target.value)}
-              required
-            />
-            <br />
-          </div>
-          <div className="mb-8 flex flex-row">
-            <div>
-              <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-                Port:
-              </label>
-            </div>
-            <input
-              type="text"
-              className="border border-[#0085FF] rounded mx-3"
-              value={port}
-              onChange={(e) => setPort(e.target.value)}
-              required
-            />
-            <br />
-          </div>
-          <div className="mb-8 flex flex-row">
-            <div>
-              <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-                Protocol:
-              </label>
-            </div>
-            <select
-              value={protocol}
-              className={`border border-[#0085FF] rounded mx-3 py-1 px-2 w-1/3`}
-              onChange={(e) => {
-                // see if e target value is "" | "http" | "https" | "socks5" | "mtproto"
-                if (
-                  e.target.value === "http" ||
-                  e.target.value === "https" ||
-                  e.target.value === "socks5" ||
-                  e.target.value === "mtproto"
-                ) {
-                  setProtocol(e.target.value);
-                }
-              }}
-              required
-            >
-              <option value="http">HTTP</option>
-              <option value="https">HTTPS</option>
-              <option value="socks5">SOCKS5</option>
-              <option value="mtproto">MTProto</option>
-            </select>
-            <br />
-          </div>
+    <div className="mt-12 w-[40rem]">
+      <form onSubmit={handleSubmit} className="items-center">
+        <div className=" pb-2 mt-4 mb-8">
+          <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 text-center">
+            Share A Proxy
+          </h1>
+          <p className="text-center px-20">
+            If you already had a proxy running, submit it here to distribute it
+            to those in need.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center items-center">
           <div>
-            <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
-              Additional Information:
-            </label>
+            <div className="mb-8 flex flex-row">
+              <div>
+                <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                  IP Address:
+                </label>
+              </div>
+              <input
+                type="text"
+                className="border border-[#0085FF] rounded mx-3  "
+                value={ip}
+                onChange={(e) => setIp(e.target.value)}
+                required
+              />
+              <br />
+            </div>
+            <div className="mb-8 flex flex-row flex-grow">
+              <div>
+                <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                  Port:
+                </label>
+              </div>
+              <input
+                type="text"
+                className="border border-[#0085FF] rounded mx-3"
+                value={port}
+                onChange={(e) => setPort(e.target.value)}
+                required
+              />
+              <br />
+            </div>
+            <div className="mb-8 flex flex-row">
+              <div>
+                <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                  Protocol:
+                </label>
+              </div>
+              <select
+                value={protocol}
+                className={`border border-[#0085FF] rounded mx-3 py-1 px-2`}
+                onChange={(e) => {
+                  // see if e target value is "" | "http" | "https" | "socks5" | "mtproto"
+                  if (
+                    e.target.value === "http" ||
+                    e.target.value === "https" ||
+                    e.target.value === "socks5" ||
+                    e.target.value === "mtproto"
+                  ) {
+                    setProtocol(e.target.value);
+                  }
+                }}
+                required
+              >
+                <option value="http">HTTP</option>
+                <option value="https">HTTPS</option>
+                <option value="socks5">SOCKS5</option>
+                <option value="mtproto">MTProto</option>
+              </select>
+              <br />
+            </div>
+            <div className="flex flex-col w-[18.25rem] sm:w-[18.75rem] md:w-[19.5rem] lg:w-[20.5rem]">
+              <label className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700  ">
+                Additional Information:
+              </label>
 
-            <br />
-            <textarea
-              className="w-3/4 border border-[#0085FF] rounded [resize:none] mt-3"
-              value={additionalInfo}
-              onChange={(e) => setAdditionalInfo(e.target.value)}
-              rows={4}
-              cols={50}
-              maxLength={200}
-            />
-            <br />
+              <textarea
+                className=" border border-[#0085FF] rounded [resize:none] mt-3 "
+                value={additionalInfo}
+                onChange={(e) => setAdditionalInfo(e.target.value)}
+                rows={4}
+                cols={50}
+                maxLength={200}
+              />
+              <br />
+            </div>
+            <div className=" pt-3 flex flex-row items-center">
+              <ButtonBlue small={false} text={"Submit"} />
+              <div className="ml-5 text-sm sm:text-md md:text-lg lg:text-xl">
+                {isSubmitted.message && <span>{isSubmitted.message}</span>}
+              </div>
+            </div>
           </div>
         </div>
-        <div className="ml-28 pt-3 flex flex-row items-center">
-          <ButtonBlue small={false} text={"Submit"} />
-          <div className="ml-5 text-sm sm:text-md md:text-lg lg:text-xl">
-            {isSubmitted.message && <span>{isSubmitted.message}</span>}
-          </div>
-        </div>
-        <div className="ml-28 pt-3 flex flex-col">
+        <div className="pt-3 flex flex-col">
           {errors.ip && (
             <span className="error-message text-red-600">{errors.ip}</span>
           )}

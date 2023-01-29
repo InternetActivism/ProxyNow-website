@@ -1,10 +1,10 @@
 export const navLinks = [
   {
-    name: "Set Up A Proxy",
+    name: "Set up Proxy",
     href: "/setup",
   },
   {
-    name: "Register Proxy",
+    name: "Share Proxy",
     href: "/register",
   },
   {
@@ -51,12 +51,12 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
     },
     {
       title: "Run The Proxy",
-      body: "Unzip the downloaded folder and open a terminal at the ProxyNow folder."
+      body: "Unzip the downloaded folder and open a terminal at the ProxyNow folder.",
     },
     {
       title: "Share Your Proxy Address",
       body: "That’s it, you now have a working proxy! Share the address displayed at the bottom of the Terminal to allow others to connect to your proxy. If you have a proxy but didn't use our tool, please consider registering your proxy on our list to help people find it.",
-    }
+    },
   ],
   AWS: [
     {
@@ -72,23 +72,24 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
             Head over to the AWS console and search for VPC and click it. On the left sidebar click on “Your VPCs” and then click on “Create VPC”.
 
             Use the following settings:
-      `
+      `,
     },
     {
       title: "Setup an EC2 Instance",
-      body: `The next step is to create an EC2 instance which will host the proxy.`
+      body: `The next step is to create an EC2 instance which will host the proxy.`,
     },
     {
       title: "Connect to the EC2 Instance (Linux or Mac)",
-      body: `The next step is to connect to the EC2 instance we created.`
+      body: `The next step is to connect to the EC2 instance we created.`,
     },
     {
       title: "Connect to the EC2 Instance (Windows)",
-      body: `The next step is to connect to the EC2 instance we created.`
+      body: `The next step is to connect to the EC2 instance we created.`,
     },
     {
       title: "Run the Proxy on your Container",
-      body: `The next step is to run the proxy on our container`}
+      body: `The next step is to run the proxy on our container`,
+    },
   ],
 };
 

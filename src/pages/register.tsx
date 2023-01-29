@@ -7,7 +7,7 @@ export default function Register() {
   return (
     <div className="flex flex-col h-screen justify-between">
       <Head>
-        <title>Register a Proxy - ProxyNow</title>
+        <title>Share Proxy - ProxyNow</title>
         <meta name="description" content="Register a proxy with ProxyNow." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
@@ -15,7 +15,7 @@ export default function Register() {
       <Header />
       <main>
         <div className="flex items-center justify-center mt-12">
-        <Form />
+          <Form />
         </div>
       </main>
       <Footer />
