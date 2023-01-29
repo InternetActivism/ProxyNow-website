@@ -134,15 +134,15 @@ const AWSSetup = () => {
                     <SetupStepText>
                         {`Now we can clone the proxy repository. Run the following command to download the proxy:`}
                     </SetupStepText>
-                    <CodeSnippet text={`git clone https://github.com/InternetActivism/ProxyNow.git`} />
+                    <CodeSnippet text={`git clone -b linux https://github.com/InternetActivism/ProxyNow.git`} />
                     <SetupStepText>
                         {`Run the following command to allow us to run the proxy script:`}
                     </SetupStepText>
-                    <CodeSnippet text={`cd ProxyNow/scripts && chmod u+x ./Linux.sh`} />
+                    <CodeSnippet text={`cd ProxyNow && chmod u+x start-proxy.sh`} />
                     <SetupStepText>
                         {`Now we can run the proxy script with the following command:`}
                     </SetupStepText>
-                    <CodeSnippet text={`./Linux.sh`} />
+                    <CodeSnippet text={`./start-proxy.sh`} />
                     <SetupStepText className="pb-10">
                         {`If you recieve a prompt asking if you would like to close a process running on conflicting ports, respond with "y".
                         
