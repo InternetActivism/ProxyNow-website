@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { FilterName } from "../pages/use";
+
+type FilterName = "All Proxies" | "WhatsApp" | "Telegram";
 
 type FilterData = {
     text: FilterName,

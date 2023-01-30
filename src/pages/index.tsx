@@ -10,15 +10,6 @@ import ShareButton from "../components/ShareButton";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>ProxyNow</title>
-        <meta
-          name="description"
-          content="Easily deploy internet proxies to help Iranians bypass internet censorship."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       <Header />
       <main>
         <div className="main-content w-full">
@@ -61,12 +52,12 @@ export default function Home() {
         <div className="about-iran bg-[#0085FF] mt-16 py-16 ">
           <div className="px-4 sm:px-12 md:px-28 lg:px-36 mx-auto max-w-screen-xl w-full">
             <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-100">
-              Millions of Iranians are unable to freely communicate across platforms like WhatsApp and Telegram due to government censorship. However, by connecting to a proxy, Iranians can bypass these restrictions.
+              Millions of Iranians are unable to freely communicate across platforms like WhatsApp and Telegram due to government censorship. By connecting to a proxy, Iranians can bypass these restrictions.
             </p>
           </div>
         </div>
         <div className="about-proxies w-full px-4  pb-20 sm:px-12 md:px-28 lg:px-36 mx-auto max-w-screen-xl">
-        <div className="">
+          <div className="">
             <div className="find-proxies pt-12  w-full">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
                 Help by starting your own proxy.
@@ -84,7 +75,7 @@ export default function Home() {
             </div>
           </div>
 
-        <div className="">
+          <div className="">
             <div className="find-proxies pt-12  w-full">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
                 What is a proxy?
@@ -107,7 +98,7 @@ export default function Home() {
                 Are proxies safe?
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
-              Millions of people across the world use proxies to safely bypass censorship filters, improve online security, and access websites that aren't available in their country.
+                Millions of people across the world use proxies to safely bypass censorship filters, improve online security, and access websites that aren&apos;t available in their country.
               </p>
             </div>
 
@@ -118,9 +109,9 @@ export default function Home() {
             </div>
           </div>
 
-         
 
-        
+
+
         </div>
         <Faq />
       </main>

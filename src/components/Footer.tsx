@@ -20,12 +20,12 @@ const Footer = () => {
             About
           </a>
           <a
-            href="https://twitter.com/internetactvsm"
+            href="/register"
             className="hover:text-blue-700"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+            Submit a Proxy
           </a>
         </div>
         <div className="float-right inset-y-0 right-0 items-end">

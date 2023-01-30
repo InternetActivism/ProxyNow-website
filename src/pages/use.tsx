@@ -43,7 +43,7 @@ const UseProxies = () => {
                   >
                     contact@internetactivism.org
                   </a>{" "}
-                  with the subject line: "I need a proxy now."
+                  with the subject line: &quot;I need a proxy now.&quot;
                 </p>
               </div>
             </div>
