@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    name: "Set up a Proxy",
+    name: "Set-up a Proxy",
     href: "/setup",
   },
   {

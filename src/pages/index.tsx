@@ -14,7 +14,7 @@ export default function Home() {
         <title>ProxyNow</title>
         <meta
           name="description"
-          content="Easily deploy internet proxies to help people bypass internet censorship all over the world."
+          content="Easily deploy internet proxies to help Iranians bypass internet censorship."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
@@ -39,7 +39,7 @@ export default function Home() {
             <Link href="/setup">
               <div className="mt-10">
                 <ButtonBlue
-                  text={"Set up Your Own Proxy"}
+                  text={"Set-up Your Own Proxy"}
                   svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
                 />
               </div>
