@@ -3,14 +3,16 @@ const Footer = () => {
     <>
       <div className="flex flow-root justify-between footer relative p-3 bg-[#0085FF] text-white">
         <div className="flex flex-row float-left justify-center items-center underline gap-2 sm:gap-6 text-[8px] sm:text-sm md:text-md lg:text-lg">
-          <a
-            href="mailto:team@internetactivism.org"
+        <a
+            href="https://www.internetactivism.org/contact"
             className="hover:text-blue-700"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Contact Us
+            Contact
           </a>
           <a
-            href="https://www.internetactivism.org/about.html"
+            href="https://www.internetactivism.org/about"
             className="hover:text-blue-700"
             target="_blank"
             rel="noopener noreferrer"

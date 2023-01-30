@@ -21,14 +21,10 @@ export default function Faq() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                What is a proxy?
+                Who runs ProxyNow?
               </h3>
               <p className="text-gray-500">
-                A proxy is like a middleman that sits between your device and
-                the piece of the internet you are trying to use. It allows
-                people to access the internet with a different identifying
-                address than their own, allowing them to bypass any censorship
-                against them.
+                ProxyNow is ran by InternetActivism, a US-based 501(c)(3) nonprofit that responds to crisis by developing online humanitarian tools for those in need.
               </p>
             </div>
             <div className="mb-10">
@@ -45,14 +41,14 @@ export default function Faq() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                Is it safe to set up a proxy?
+                Where do my proxies go?
               </h3>
               <p className="text-gray-500 ">
-                For the most part, it is safe to set up a proxy. It is important
-                to only distribute your proxy to trusted individuals because any
-                activity that occurs while using a proxy that you have created
-                can be traced back to you. You can also choose to give ProxyNow
-                rights to distribute your proxy to trusted individuals in need.
+                We work with local NGOs and Iranian activist organizations to distribute your proxy server to those in need.
+                <br /><br />
+                <p className="text-gray-500 ">
+                  Additionally, you can privately message your proxy details directly to those in Iran across social media.
+                </p>
               </p>
             </div>
           </div>
@@ -71,13 +67,13 @@ export default function Faq() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                Is it safe to use a proxy?
+                Should I publicly advertise my proxy?
               </h3>
               <p className="text-gray-500">
-                Using a proxy through Whatsapp, Telegram, or Signal is safe.
-                These platforms encrypt all the information that you send, so
-                nobody can ever see what you are sending. The proxy provider
-                will have access to your IP address.
+                It is best not to advertise your proxy in public because it will
+                get taken down quickly. Instead try to send it through private
+                messages, or allow ProxyNow to securely handle the
+                distribution.
               </p>
             </div>
             <div className="mb-10">
@@ -94,17 +90,24 @@ export default function Faq() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                How do I send my proxy to someone in need?
+                How can I help?
               </h3>
               <p className="text-gray-500">
-                It is best not to advertise your proxy in public because it will
-                get taken down quickly. Instead try to send it through private
-                messages. You can allow ProxyNow to securely handle the
-                distribution of your proxy for you or post the following on your
-                social media:
-              </p>
-              <p className="italic text-gray-500">
-                #ProxyNow I ran a proxy. Reply or DM for connection details.
+                Get involved with ProxyNow by joining the InternetActivism <a
+                  href="https://discord.gg/gdxvW2sM"
+                  className="hover:text-blue-700 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discord server
+                </a>, or by <a
+                  href="https://internetactivism.org/donate"
+                  className="hover:text-blue-700 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  donating
+                </a> to our organization directly.
               </p>
             </div>
           </div>
