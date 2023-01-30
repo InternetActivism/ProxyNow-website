@@ -76,28 +76,6 @@ function Form() {
     setSubmitted(submitMessage);
   };
 
-  const checkIpExists = async (ip: string) => {
-    // Your JSON file URL
-    const url_registered = `https://proxynow-c699d-default-rtdb.firebaseio.com/proxynow-form/.json?orderBy="ip"&equalTo="${ip}"`;
-    const url_proxynow = `https://proxynow-c699d-default-rtdb.firebaseio.com/proxynow-script/.json?orderBy="ip"&equalTo="${ip}"`;
-    try {
-      const response_one = await fetch(url_registered);
-      const registeredProxies = await response_one.json();
-
-      const response_two = await fetch(url_proxynow);
-      const listedProxies = await response_two.json();
-
-      if (
-        Object.keys(registeredProxies).length === 0 &&
-        Object.keys(listedProxies).length === 0
-      )
-        return false;
-      else return true;
-    } catch (error) {
-      console.error("Error checking IP address: ", error);
-    }
-  };
-
   const validate = async () => {
     const errors: {
       ip?: string;
@@ -122,11 +100,6 @@ function Form() {
     if (additionalInfo.length > 200) {
       errors.additionalInfo =
         "Additional information should not exceed 200 characters.";
-    }
-
-    const ipExists = await checkIpExists(ip);
-    if (ipExists) {
-      errors.ip = "This IP address already exists in the database.";
     }
 
     return errors;
