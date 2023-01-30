@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ButtonFilter from "../components/ButtonFilter";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
+import ButtonBlue from "../components/ButtonBlue";
+import WhatsappLogo from "../components/logos/WhatsappLogo";
+import TelegramLogo from "../components/logos/TelegramLogo";
+import { useRouter } from "next/router";
 
-export type FilterName = "All Proxies" | "WhatsApp" | "Telegram";
-
-const List = () => {
-  const [filter, setFilter] = useState<FilterName>("All Proxies");
+const UseProxies = () => {
+  const router = useRouter();
 
   return (
     <div className="flex flex-col h-screen justify-between">
@@ -48,45 +49,83 @@ const List = () => {
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
                 How to use a Proxy
               </h1>
-              <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 whitespace-pre-line">
-                <b>How to connect to a proxy on WhatsApp on Android:</b><br/>
-                1. Ensure you have the latest version of WhatsApp <br/>
-                2. Go to Chats &gt; More options &gt; Settings <br/>
-                3. Tap Storage and Data &gt; Proxy <br/>
-                4. Select Use Proxy and enter the proxy address <br/>
-                5. Save the settings and check for a successful connection indicated by a green tick <br/>
-                6. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
-                <br/>
-                <b>How to connect to a proxy on Telegram on Android:</b><br/>
-                1. Open the Telegram app and tap the three lines at the top left.<br/>
-                2. Select Settings &gt; Data and Storage &gt; Proxy Settings &gt; Use Proxy or Add Proxy.<br/>
-                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
-                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap the tick mark. If you used our script you do not have to enter any credentials.<br/>
-                4. If the proxy shows as connected at the bottom of your Android device, it is now online.<br/>
-                <br/>
-                <b>How to connect to a proxy on WhatsApp on iPhone:</b><br/>
-                1. Ensure you have the latest version of WhatsApp <br/>
-                2. Go to WhatsApp Settings &gt; Storage and Data &gt; Proxy <br/>
-                3. Select Use Proxy and enter the proxy address <br/>
-                4. Save the settings and check for a successful connection indicated by a green tick <br/>
-                5. If unsuccessful, try a different proxy address as the previous one may be blocked <br/>
-                <br/>
-                <b>How to connect to a proxy on Telegram on iPhone:</b><br/>
-                1. Open the Telegram app and tap settings.<br/>
-                2. Select Data and Storage &gt; Proxy &gt; Add Proxy.<br/>
-                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
-                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap done. If you used our script you do not have to enter any credentials.<br/>
-                4. Toggle the Use proxy button to enable the proxy.<br/>
-                <br/>
-                <b>How to connect to a proxy on Telegram on Desktop:</b><br/>
-                1. Open the Telegram app and tap the settings icon.<br/>
-                2. Select Data and Storage &gt; Use Proxy &gt; Add Proxy.<br/>
-                3. Choose SOCKS5 or MTProto, enter your server or IP address and port number. If you used our script choose SOCKS5 and set the port number to 1080.<br/>
-                4. Enter your login credentials for SOCKS5 or secret credentials for MTProto, and tap done. If you used our script you do not have to enter any credentials.<br/>
-                4. Toggle the Proxy button to enable the proxy.<br/>
-                <br/>
-                Note: Using a third-party proxy will share your IP address with the proxy provider. 
-              </p>
+              <div>
+                <div className="flex flex-row flex-wrap justify-center">
+                  <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2 ">
+                    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                      <div className="px-6 py-4">
+                        <div className="flex flex-row justify-between">
+                          <div className="font-bold text-xl mb-2">WhatsApp</div>
+                          <WhatsappLogo className="h-6 md:h-8 w-6 md:w-8" />
+                        </div>
+                        <div className="text-gray-700 text-base">
+                          Using a proxy doesn’t change the high level of privacy
+                          and security that WhatsApp provides to all users. Your
+                          personal messages and calls will still be protected by
+                          end-to-end encryption.
+                        </div>
+                      </div>
+                      <div className="px-6 py-4">
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                          HTTP
+                        </span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                          HTTPS
+                        </span>
+                      </div>
+                      <div className="px-6 py-4">
+                        <ButtonBlue
+                          small={true}
+                          text="View Tutorial"
+                          onClick={() => {
+                            router.push(
+                              "https://faq.whatsapp.com/520504143274092/?cms_platform=iphone&helpref=platform_switcher"
+                            );
+                          }}
+                        ></ButtonBlue>
+                      </div>
+                    </div>
+                  </div>{" "}
+                  <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2 ">
+                    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                      <div className="px-6 py-4">
+                        <div className="flex flex-row justify-between">
+                          <div className="font-bold text-xl mb-2">Telegram</div>
+                          <TelegramLogo className="h-4 md:h-6 w-4 md:w-6 m-2" />
+                        </div>
+                        <div className="text-gray-700 text-base">
+                          Proxy servers help you remain safe on Telegram as it
+                          is your chats are encrypted and your IP is hidden.
+                          Moreover, these proxy servers can also be used to
+                          unblock Telegram if it’s unavailable in your country.
+                        </div>
+                      </div>
+                      <div className="px-6 py-4">
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                          SOCKS5
+                        </span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                          MTProto
+                        </span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                          HTTP
+                        </span>
+                      </div>
+                      <div className="px-6 py-4">
+                        <ButtonBlue
+                          small={true}
+                          text="View Tutorial"
+                          onClick={() => {
+                            router.push(
+                              "https://geonode.com/blog/how-to-use-proxies-with-telegram/#How%20To%20Create%20Proxy%20For%20Telegram"
+                            );
+                          }}
+                        ></ButtonBlue>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -96,4 +135,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default UseProxies;
