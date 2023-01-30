@@ -98,7 +98,7 @@ export default function Home() {
                 Are proxies safe?
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
-              Millions of people across the world use proxies to safely bypass censorship filters, improve online security, and access websites that aren't available in their country.
+              Millions of people across the world use proxies to safely bypass censorship filters, improve online security, and access websites that aren&apos;t available in their country.
               </p>
             </div>
 
