@@ -15,15 +15,15 @@ const githubURL: {[key in 'Mac' | 'Linux']: string} = {
 };
 
 const ButtonDownload = ({ platform }: Props) => {
-    const openUrlInNewTab = (url: string) => {
-        window.open(url, '_blank', 'noopener,noreferrer')
+    const openURL = (url: string) => {
+        window.open(url, '_self')
     };
 
     return (
         <div className="flex flex-row items-center">
             <button 
                 className="inline-flex items-center bg-[#0085FF] hover:bg-blue-700 text-white py-2 rounded-full px-1"
-                onClick={() => openUrlInNewTab(downloadURL[platform])}
+                onClick={() => openURL(downloadURL[platform])}
             >
                 <div className="flex items-center justify-center mx-auto">
                     <div className="text-xs sm:text-sm md:text-md lg:text-lg pl-3 sm:pl-4 lg:pl-6">
@@ -37,8 +37,10 @@ const ButtonDownload = ({ platform }: Props) => {
             <div className="pl-2">
             <p className="text-black/70 text-black text-xs sm:text-sm md:text-md lg:text-lg">{'or view the source code on '}
                 <a 
-                className="text-primary underline cursor-pointer" 
-                onClick={() => openUrlInNewTab(githubURL[platform])}
+                className="text-primary cursor-pointer" 
+                href={githubURL[platform]}
+                target="_blank"
+                rel="noreferrer"
                 >
                     GitHub
                 </a>

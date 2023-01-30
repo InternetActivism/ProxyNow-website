@@ -15,7 +15,26 @@ const LinuxSetup = () => {
     return (
         <div>
             <SetupStep step={1} stepData={copy[0]} >
-                <ButtonDownload platform='Linux' />
+                <>
+                    <SetupStepText className="pb-5">
+                        <p>
+                            {`The script will install some simple dependencies and provide you the option to start each proxy. 
+                            
+                            The WhatsApp proxy is the official one distributed by WhatsApp which you can find `}
+                            <a className="text-primary cursor-pointer" href="https://github.com/WhatsApp/proxy">
+                                on GitHub
+                            </a>
+                            {`. The Telegram proxy is a simple SOCKS5 server created from `}
+                            <a className="text-primary cursor-pointer" href="https://hub.docker.com/r/serjs/go-socks5-proxy/">
+                                a Docker image
+                            </a>
+                            {`.
+                            
+                            No information is shared by the script unless you choose to share your proxy address with us when prompted.`}
+                        </p>
+                    </SetupStepText>
+                    <ButtonDownload platform="Linux" />
+                </>
             </SetupStep>
             <SetupStep step={2} stepData={copy[1]} >
                 <>
