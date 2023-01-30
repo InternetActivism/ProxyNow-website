@@ -37,7 +37,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
     },
     {
       title: "Run The Proxy",
-      body: "Unzip the downloaded folder and open it then navigate to scripts folder and open the MacOS-whatsapp.command file. This will start the proxy in Terminal.",
+      body: "Unzip the downloaded folder and open the start-proxy.command file. This will start the proxy in Terminal.",
     },
     {
       title: "Share Your Proxy Address",
@@ -108,7 +108,7 @@ export const troubleshootingSteps: {
       title: `I can't open the script because Apple cannot check it for malicious software`,
       body: `This is an automatic security measure provided by macOS when installing scripts from the web. We assure that our script is completely safe and will not install any malware. If you have any concerns, all of our source code is public on our GitHub. 
       
-      To bypass this navigate to System Preferences > Security & Privacy > General and click “Open Anyway”.`,
+      To bypass this navigate to System Settings > Security & Privacy > General and click “Open Anyway”.`,
     },
     {
       title: `I received the error “Unable to automatically map ports”`,
@@ -129,7 +129,7 @@ export const troubleshootingSteps: {
       • Port forwarding has not been configured correctly. For more information on port forwarding see the troubleshooting step: I received the error “Unable to automatically map ports.”
       • Your proxy is not running. Open the Docker app and check that the whatsapp-proxy container is running.
 
-      You can also check for any errors that occurred while running the script by viewing the full log located in the logs directory of the downloaded folder.`,
+      You can also check for any errors that occurred while running the script by viewing the full log located in the logs directory of the _data folder.`,
     },
   ],
   Linux: [
@@ -152,7 +152,7 @@ export const troubleshootingSteps: {
       • Port forwarding has not been configured correctly. For more information on port forwarding see the troubleshooting step: I received the error “Unable to automatically map ports.”
       • Your proxy is not running. Open the Docker app and check that the whatsapp_proxy container is running.
 
-      You can also check for any errors that occurred while running the script by viewing the full log located in the logs directory of the downloaded folder.`,
+      You can also check for any errors that occurred while running the script by viewing the full log located in the logs directory of the _data folder.`,
     },
   ],
   AWS: [],

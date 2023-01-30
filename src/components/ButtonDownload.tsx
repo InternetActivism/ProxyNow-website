@@ -37,7 +37,7 @@ const ButtonDownload = ({ platform }: Props) => {
             <div className="pl-2">
             <p className="text-black/70 text-black text-xs sm:text-sm md:text-md lg:text-lg">{'or view the source code on '}
                 <a 
-                className="text-primary underline cursor-pointer" 
+                className="text-primary cursor-pointer" 
                 onClick={() => openUrlInNewTab(githubURL[platform])}
                 >
                     GitHub

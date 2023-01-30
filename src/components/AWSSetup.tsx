@@ -115,7 +115,7 @@ const AWSSetup = () => {
             <SetupStep step='4b' stepData={copy[4]} >
                 <>
                     <SetupStepText>   
-                        {`Ensure that the EC2 instance is running by checking the "Instance state" on the instances dashboard. If it is not running click on then container then press "Actions" and then click on "Start".
+                        {`Ensure that the EC2 instance is running by checking the "Instance state" on the instances dashboard. If it is not running click on the container, press "Actions" and then click on "Start".
 
                         Take note of the Public IPv4 address of the instance. You can find this on the instances dashboard under the "Public IPv4 address" column.
 
