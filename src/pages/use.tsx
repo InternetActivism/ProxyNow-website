@@ -35,13 +35,15 @@ const UseProxies = () => {
                   proxies to those who need it most.
                 </p>{" "}
                 <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 mt-6">
-                  If you are in dire need of a proxy right now, please{" "}
+                  If you are in dire need of a proxy right now, please email us
+                  at{" "}
                   <a
-                    href="https://twitter.com/internetactvsm"
+                    href="mailto:contact@internetactivism.org"
                     className="text-[#0085FF] hover:text-[#167CCB] font-medium"
                   >
-                    contact us on Twitter.
-                  </a>
+                    contact@internetactivism.org
+                  </a>{" "}
+                  with the subject line: "I need a proxy now."
                 </p>
               </div>
             </div>

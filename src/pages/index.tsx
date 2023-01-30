@@ -81,8 +81,11 @@ export default function Home() {
                 ProxyNow has created simple steps to start your own proxy
                 without any technical knowledge. This proxy will allow Iranians
                 to bypass internet censorship and communicate with their loved
-                ones. If you have access to a computer, we strongly suggest you
-                consider starting a proxy.
+                ones. If you already have an existing proxy, you can{" "}
+                <Link href="/register" className="text-primary cursor-pointer">
+                  share it with ProxyNow
+                </Link>{" "}
+                to distribute it to those in need.
               </p>
             </div>
 
