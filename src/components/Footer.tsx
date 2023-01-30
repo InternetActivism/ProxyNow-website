@@ -30,7 +30,14 @@ const Footer = () => {
         </div>
         <div className="float-right inset-y-0 right-0 items-end">
           <p className="text-[8px] sm:text-sm md:text-md lg:text-lg text-white">
-            Built by InternetActivism, a 501(c)(3) organization.
+            An <a
+            href="https://internetactivism.org"
+            className="hover:text-blue-700 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            InternetActivism
+          </a> project.
           </p>
         </div>
       </div>
