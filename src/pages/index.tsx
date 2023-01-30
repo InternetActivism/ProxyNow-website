@@ -10,15 +10,6 @@ import ShareButton from "../components/ShareButton";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>ProxyNow</title>
-        <meta
-          name="description"
-          content="Easily deploy internet proxies to help people bypass internet censorship all over the world."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       <Header />
       <main>
         <div className="main-content w-full">
