@@ -33,7 +33,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
   Mac: [
     {
       title: "Download Our Proxy Setup Tool",
-      body: "For a quick and easy proxy setup simply download and run our script",
+      body: "For a quick and easy proxy setup simply download and run our script. This will download a zipped folder which contains the script and all the files needed to run the proxy.",
     },
     {
       title: "Run The Proxy",
@@ -47,7 +47,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
   Linux: [
     {
       title: "Download Our Proxy Setup Tool",
-      body: "For a quick and easy proxy setup simply download and run our script",
+      body: "For a quick and easy proxy setup simply download and run our script. This will download a zipped folder which contains the script and all the files needed to run the proxy.",
     },
     {
       title: "Run The Proxy",
@@ -104,6 +104,12 @@ export const troubleshootingSteps: {
   AWS: TroubleshootingContent[];
 } = {
   Mac: [
+    {
+      title: `I can't open the script because Apple cannot check it for malicious software`,
+      body: `This is an automatic security measure provided by macOS when installing scripts from the web. We assure that our script is completely safe and will not install any malware. If you have any concerns, all of our source code is public on our GitHub. 
+      
+      To bypass this navigate to System Preferences > Security & Privacy > General and click “Open Anyway”.`,
+    },
     {
       title: `I received the error “Unable to automatically map ports”`,
       body: `This error means that the script attempted port forwarding automatically but failed. This step is required to allow external devices to send information to your computer and access the proxy. Port forwarding can also be done manually through your router’s settings. Every router’s interface is different but here are some general steps:

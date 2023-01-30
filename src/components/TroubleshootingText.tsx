@@ -1,5 +1,5 @@
 interface Props {
-    body: string
+    body: string;
 }
 
 const TroubleshootingText = ({ body }: Props) => {
