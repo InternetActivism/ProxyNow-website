@@ -52,7 +52,9 @@ export default function Home() {
         <div className="about-iran bg-[#0085FF] mt-16 py-16 ">
           <div className="px-4 sm:px-12 md:px-28 lg:px-36 mx-auto max-w-screen-xl w-full">
             <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-100">
-              Millions of Iranians are unable to freely communicate across platforms like WhatsApp and Telegram due to government censorship. By connecting to a proxy, Iranians can bypass these restrictions.
+              Millions of Iranians are unable to freely communicate across
+              platforms like WhatsApp and Telegram due to government censorship.
+              By connecting to a proxy, Iranians can bypass these restrictions.
             </p>
           </div>
         </div>
@@ -64,7 +66,12 @@ export default function Home() {
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
                 ProxyNow has created simple steps to start your own proxy
-                without any technical knowledge.
+                without any technical knowledge. If you already have a proxy
+                running,{" "}
+                <a className="text-primary cursor-pointer" href="/register">
+                  share it with ProxyNow
+                </a>{" "}
+                to distribute it to those in need.
               </p>
             </div>
 
@@ -81,7 +88,9 @@ export default function Home() {
                 What is a proxy?
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
-                A proxy server is like a middleman between your computer and the internet, helping protect your identity and keep your online activity private.
+                A proxy server is like a middleman between your computer and the
+                internet, helping protect your identity, keep your online
+                activity private, and bypass internet censorship.
               </p>
             </div>
 
@@ -95,23 +104,21 @@ export default function Home() {
           <div className="">
             <div className="find-proxies pt-12  w-full">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black pb-4 w-full">
-                Are proxies safe?
+                Using a proxy.
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
-                Millions of people across the world use proxies to safely bypass censorship filters, improve online security, and access websites that aren&apos;t available in their country.
+                Popular chat applications allow you to connect to a proxy server
+                to bypass internet censorship. ProxyNow works with partner
+                organizations to distribute these proxies with those in need.
               </p>
             </div>
 
             <div className="pt-4">
               <Link href="https://www.upguard.com/blog/proxy-server">
-                <ButtonBlue small={true} text={"Learn more"} />
+                <ButtonBlue small={true} text={"Use a proxy"} />
               </Link>
             </div>
           </div>
-
-
-
-
         </div>
         <Faq />
       </main>
