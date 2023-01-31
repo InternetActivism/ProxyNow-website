@@ -52,7 +52,7 @@ const LinuxSetup = () => {
             text="# Allow the script to be executed~
             sudo chmod u+x start-proxy.sh~
             # Run the script:~
-            sudo ./start-proxy.sh
+            ./start-proxy.sh
             "
           />
         </>
