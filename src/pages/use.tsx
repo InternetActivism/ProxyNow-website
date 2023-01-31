@@ -108,6 +108,9 @@ const UseProxies = () => {
                           is your chats are encrypted and your IP is hidden.
                           Moreover, these proxy servers can also be used to
                           unblock Telegram if it’s unavailable in your country.
+                          <br />
+                          Ensure to select the SOCKS5 option in the proxy
+                          settings.
                         </div>
                       </div>
                       <div className="px-6 py-4">
