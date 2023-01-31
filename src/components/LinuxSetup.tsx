@@ -45,13 +45,16 @@ const LinuxSetup = () => {
       <SetupStep step={2} stepData={copy[1]}>
         <>
           <SetupStepText>
-            Enter superuser mode before running the script:
+            Paste the following text into your terminal, press enter, and follow
+            the steps on screen.
           </SetupStepText>
-          <CodeSnippet text="sudo su" />
-          <SetupStepText>Allow the script to be executed:</SetupStepText>
-          <CodeSnippet text="chmod u+x start-proxy.sh" />
-          <SetupStepText>Run the script:</SetupStepText>
-          <CodeSnippet text="./start-proxy.sh" />
+          <CodeSnippet
+            text="# Allow the script to be executed~
+            sudo chmod u+x start-proxy.sh~
+            # Run the script:~
+            sudo ./start-proxy.sh
+            "
+          />
         </>
       </SetupStep>
       <SetupStep step={3} stepData={copy[2]} />

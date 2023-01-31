@@ -37,7 +37,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
     },
     {
       title: "Share Your Proxy Address",
-      body: "That’s it, you now have a working proxy If you selected the option, the ProxyNow team will distribute it to those in need, otherwise, share the address displayed at the bottom of the Terminal to allow others to connect to your proxy.\n\nYou must keep the tool running for the proxy to work, otherwise, you can run the tool to restart the proxy.",
+      body: "That’s it, you now have a working proxy. If you selected the option, the ProxyNow team will distribute it to those in need, otherwise, share the address displayed at the bottom of the Terminal to allow others to connect to your proxy.\n\nYou must keep the tool running for the proxy to work, otherwise, you can run the tool to restart the proxy.",
     },
   ],
   Linux: [
@@ -51,7 +51,7 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
     },
     {
       title: "Share Your Proxy Address",
-      body: "That’s it, you now have a working proxy If you selected the option, the ProxyNow team will distribute it to those in need, otherwise, share the address displayed at the bottom of the Terminal to allow others to connect to your proxy.\n\nYou must keep the tool running for the proxy to work, otherwise, you can run the tool to restart the proxy.",
+      body: "That’s it, you now have a working proxy. If you selected the option, the ProxyNow team will distribute it to those in need, otherwise, share the address displayed at the bottom of the Terminal to allow others to connect to your proxy.\n\nYou must keep the tool running for the proxy to work, otherwise, you can run the tool to restart the proxy.",
     },
   ],
   AWS: [
