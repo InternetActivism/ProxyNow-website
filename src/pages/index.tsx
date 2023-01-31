@@ -66,19 +66,20 @@ export default function Home() {
               </h1>
               <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-700">
                 ProxyNow has created simple steps to start your own proxy
-                without any technical knowledge. If you already have a proxy
-                running,{" "}
-                <Link className="text-primary cursor-pointer" href="/register">
-                  share it with ProxyNow
-                </Link>{" "}
-                to distribute it to those in need.
+                without any technical knowledge.
               </p>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 text-xs sm:text-sm md:text-md lg:text-lg">
               <Link href="/setup">
                 <ButtonBlue small={true} text={"Start a Proxy"} />
-              </Link>
+              </Link>{" "}
+              <Link href="/register" className="mx-2">
+                <ButtonWhite
+                  small={true}
+                  text={"Submit a pre-existing Proxy"}
+                />
+              </Link>{" "}
             </div>
           </div>
 
