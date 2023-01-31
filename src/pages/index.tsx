@@ -68,9 +68,9 @@ export default function Home() {
                 ProxyNow has created simple steps to start your own proxy
                 without any technical knowledge. If you already have a proxy
                 running,{" "}
-                <a className="text-primary cursor-pointer" href="/register">
+                <Link className="text-primary cursor-pointer" href="/register">
                   share it with ProxyNow
-                </a>{" "}
+                </Link>{" "}
                 to distribute it to those in need.
               </p>
             </div>
