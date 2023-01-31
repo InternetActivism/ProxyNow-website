@@ -35,7 +35,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <Link href="/list">
+            <Link href="/use">
               <div className="mt-10 ml-5">
                 <ButtonWhite text={"Use a Proxy"} />
               </div>
