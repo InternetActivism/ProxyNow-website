@@ -33,7 +33,9 @@ export const setupCopy: { Mac: Step[]; Linux: Step[]; AWS: Step[] } = {
     },
     {
       title: "Run The Proxy",
-      body: "Unzip the downloaded folder and open the start-proxy.command file. This will start the proxy in Terminal.",
+      body: `Unzip and open the downloaded folder. Then, right click the 'start-proxy.command' file and click open.
+      
+      Follow the steps in the terminal, such as agreeing to share your proxy with ProxyNow. Setup may take a few minutes to complete.`,
     },
     {
       title: "Share Your Proxy Address",
@@ -104,11 +106,13 @@ export const troubleshootingSteps: {
       title: `I can't open the script because Apple cannot check it for malicious software`,
       body: `This is an automatic security measure provided by macOS when installing scripts from the web. We assure that our script is completely safe and will not install any malware. If you have any concerns, all of our source code is public on our GitHub. 
       
-      To bypass this navigate to System Settings > Security & Privacy > General and click “Open Anyway”.`,
+      To bypass this, right click on the file and click open.`,
     },
     {
       title: `I received the error “Unable to automatically map ports”`,
-      body: `This error means that the script attempted port forwarding automatically but failed. This step is required to allow external devices to send information to your computer and access the proxy. Port forwarding can also be done manually through your router’s settings. Every router’s interface is different but here are some general steps:
+      body: `This error means that the script attempted port forwarding automatically but failed. This could be because you are on a public network (such as a university or workplace), or because of specific router security settings.
+      
+      This step is required to allow external devices to send information to your computer and access the proxy. Port forwarding can also be done manually through your router’s settings. Every router’s interface is different but here are some general steps:
                                 
       1. Log in to your router's web-based interface by entering its IP address into a web browser.
       2. Look for a menu labeled "Port Forwarding" or "Virtual Servers." This is typically found under a section called "Advanced" or "Firewall."
@@ -131,7 +135,9 @@ export const troubleshootingSteps: {
   Linux: [
     {
       title: `I received the error “Unable to automatically map ports”`,
-      body: `This error means that the script attempted port forwarding automatically but failed. This step is required to allow external devices to send information to your computer and access the proxy. Port forwarding can also be done manually through your router’s settings. Every router’s interface is different but here are some general steps:
+      body: `This error means that the script attempted port forwarding automatically but failed. This could be because you are on a public network (such as a university or workplace), or because of specific router security settings.
+      
+      This step is required to allow external devices to send information to your computer and access the proxy. Port forwarding can also be done manually through your router’s settings. Every router’s interface is different but here are some general steps:
                                 
       1. Log in to your router's web-based interface by entering its IP address into a web browser.
       2. Look for a menu labeled "Port Forwarding" or "Virtual Servers." This is typically found under a section called "Advanced" or "Firewall."
