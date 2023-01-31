@@ -51,7 +51,7 @@ export default function Faq() {
               <p className="text-gray-500">
                 Millions of people across the world use proxies to safely bypass
                 censorship filters, improve online security, and access websites
-                that aren't available in their country.
+                that aren&apos;t available in their country.
                 <br />
                 <a
                   href="https://www.upguard.com/blog/proxy-server"
