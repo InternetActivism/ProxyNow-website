@@ -8,7 +8,7 @@ export default function Register() {
     <div className="flex flex-col h-screen justify-between">
       <Head>
         <title>Share Proxy - ProxyNow</title>
-        <meta name="description" content="Register a proxy with ProxyNow." />
+        <meta name="description" content="Share a proxy with ProxyNow." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </Head>

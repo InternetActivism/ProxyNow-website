@@ -26,19 +26,31 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image:width" content="1200" />
 
         <meta property="og:title" content="ProxyNow" />
-        <meta property="og:image" content="https://proxynow.org/embed-image.jpg" />
-        <meta property="og:description" content="Help millions access the internet." />
-        
-        <meta name="twitter:site" content="@internetactvsm"/>
-        <meta name="twitter:creator" content="@internetactvsm"/>
-        <meta name="twitter:title" content="ProxyNow"/>
-        <meta name="twitter:description" content="Help millions access the internet."/>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="https://proxynow.org/embed-image.jpg"/>
+        <meta
+          property="og:image"
+          content="https://proxynow.org/embed-image.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Help Iranians access the internet."
+        />
 
-        <meta name="theme-color" content="#0085FF"/>
-        <meta name="msapplication-navbutton-color" content="#0085FF"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="#0085FF"/>
+        <meta name="twitter:site" content="@internetactvsm" />
+        <meta name="twitter:creator" content="@internetactvsm" />
+        <meta name="twitter:title" content="ProxyNow" />
+        <meta
+          name="twitter:description"
+          content="Help Iranians access the internet."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://proxynow.org/embed-image.jpg"
+        />
+
+        <meta name="theme-color" content="#0085FF" />
+        <meta name="msapplication-navbutton-color" content="#0085FF" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0085FF" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
