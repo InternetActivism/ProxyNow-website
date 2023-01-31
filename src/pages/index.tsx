@@ -23,14 +23,14 @@ export default function Home() {
               </h1>
             </div>
             <p className="pt-5 pl-[10%] text-gray-700 pr-[5%] sm:text-lg md:text-xl lg:text-2xl w-full lg:w-3/4">
-              Set-up proxies to help Iranians bypass internet censorship.
+              Set up proxies to help Iranians bypass internet censorship.
             </p>
           </div>
           <div className="pl-[10%] pr-[5%] inline-flex">
             <Link href="/setup">
               <div className="mt-10">
                 <ButtonBlue
-                  text={"Set-up Your Own Proxy"}
+                  text={"Set up Your Own Proxy"}
                   svgD="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
                 />
               </div>
