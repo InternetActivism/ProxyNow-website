@@ -6,6 +6,7 @@ import ButtonBlue from "../components/ButtonBlue";
 import WhatsappLogo from "../components/logos/WhatsappLogo";
 import TelegramLogo from "../components/logos/TelegramLogo";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const UseProxies = () => {
   const router = useRouter();
@@ -61,10 +62,17 @@ const UseProxies = () => {
                           <WhatsappLogo className="h-6 md:h-8 w-6 md:w-8" />
                         </div>
                         <div className="text-gray-700 text-base">
-                          Using a proxy doesn’t change the high level of privacy
-                          and security that WhatsApp provides to all users. Your
-                          personal messages and calls will still be protected by
-                          end-to-end encryption.
+                          Choosing a proxy enables you to connect to WhatsApp
+                          through servers set up by volunteers around the world
+                          dedicated to helping people communicate freely. If you
+                          have the ability to help others connect, you can learn
+                          how to set up a proxy{" "}
+                          <Link
+                            className="text-primary cursor-pointer"
+                            href="/setup"
+                          >
+                            here.
+                          </Link>
                         </div>
                       </div>
                       <div className="px-6 py-4">
