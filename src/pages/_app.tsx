@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>ProxyNow</title>
-        <meta name="description" content="Help Iranians access the internet." />
+        <meta name="description" content="Help people access the internet." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:type" content="website" />
@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:description"
-          content="Help Iranians access the internet."
+          content="Help people access the internet."
         />
 
         <meta name="twitter:site" content="@internetactvsm" />
@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content="ProxyNow" />
         <meta
           name="twitter:description"
-          content="Help Iranians access the internet."
+          content="Help people access the internet."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

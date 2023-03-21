@@ -141,13 +141,13 @@ export default function Faq() {
                 Where do my proxies go?
               </h3>
               <p className="text-gray-500 ">
-                We work with local NGOs and Iranian activist organizations to
-                distribute your proxy server to those in need.
+                We work with local NGOs and activist organizations to distribute
+                your proxy server to those in need.
                 <br />
                 <br />
                 <p className="text-gray-500 ">
                   Additionally, you can privately message your proxy details
-                  directly to those in Iran across social media.
+                  directly to those in need across social media.
                 </p>
               </p>
             </div>

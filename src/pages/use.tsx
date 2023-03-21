@@ -15,7 +15,7 @@ const UseProxies = () => {
     <div className="flex flex-col h-screen justify-between">
       <Head>
         <title>Use a Proxy - ProxyNow</title>
-        <meta name="description" content="Help Iranians access the internet." />
+        <meta name="description" content="Help people access the internet." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </Head>

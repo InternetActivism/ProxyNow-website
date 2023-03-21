@@ -16,14 +16,14 @@ export default function Home() {
           <div className="main-text w-full">
             <div className="pt-48 pl-[10%] pr-[10%] leading-[1.2] sm:pr-[5%] text-[2.25rem] sm:text-[2.5rem] md:text-[3 rem] lg:text-[4rem] xl:text-[5.25rem] font-semibold flex w-full lg:w-4/5">
               <h1>
-                Help Iranians access{" "}
+                Help people access{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#54A8EA] to-[#167CCB]">
                   the internet.
                 </span>
               </h1>
             </div>
             <p className="pt-5 pl-[10%] text-gray-700 pr-[5%] sm:text-lg md:text-xl lg:text-2xl w-full lg:w-3/4">
-              Set up proxies to help Iranians bypass internet censorship.
+              Set up proxies to help people bypass internet censorship.
             </p>
           </div>
           <div className="pl-[10%] pr-[5%] inline-flex">
@@ -52,9 +52,9 @@ export default function Home() {
         <div className="about-iran bg-[#0085FF] mt-16 py-16 ">
           <div className="px-4 sm:px-12 md:px-28 lg:px-36 mx-auto max-w-screen-xl w-full">
             <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-100">
-              Millions of Iranians are unable to freely communicate across
+              Millions of people are unable to freely communicate across
               platforms like WhatsApp and Telegram due to government censorship.
-              By connecting to a proxy, Iranians can bypass these restrictions.
+              By connecting to a proxy, people can bypass these restrictions.
             </p>
           </div>
         </div>
